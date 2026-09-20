@@ -2,7 +2,6 @@
 
 import React from 'react';
 import CinematicIntro from '@/components/CinematicIntro';
-import LavaBackground from '@/components/LavaBackground';
 import CustomCursor from '@/components/CustomCursor';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
@@ -21,9 +20,6 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#070707] text-[#F5F5F5] selection:bg-[#FF5A4F] selection:text-black">
       {/* 0. Dramatic Opening Sequence on Load/Refresh */}
       <CinematicIntro />
-
-      {/* 0.1 Boiling Lava Simulation Background */}
-      <LavaBackground />
 
       {/* 1. Desktop Interactive Custom Cursor */}
       <CustomCursor />

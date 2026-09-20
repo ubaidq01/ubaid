@@ -80,24 +80,24 @@ export default function Hero() {
         className="w-full max-w-[1400px] mx-auto flex items-center justify-between pt-2 sm:pt-4"
       >
         <div className="flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5A4F] animate-ping" />
-          <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-neutral-200">
+          <span className="h-3 w-3 rounded-full bg-[#FF5A4F] animate-ping" />
+          <span className="text-xs sm:text-base font-mono font-semibold uppercase tracking-[0.25em] text-neutral-100">
             CS (DATA SCIENCE) STUDENT / FULL-STACK &amp; AI
           </span>
         </div>
-        <div className="hidden sm:block text-xs sm:text-sm font-mono tracking-widest text-neutral-400 uppercase">
+        <div className="hidden sm:block text-xs sm:text-sm font-mono tracking-widest text-neutral-300 uppercase font-semibold">
           [ 2026 OFFICIAL PORTFOLIO ]
         </div>
       </motion.div>
 
       {/* 3. Hero Centerpiece: BIG NAME + Proportional Statement Below */}
-      <div className="w-full max-w-[1400px] mx-auto my-auto py-3 sm:py-6">
+      <div className="w-full max-w-[1400px] mx-auto my-auto py-6 sm:py-10">
         <motion.div
           style={{ y: typographyY, scale: typographyScale, opacity: typographyOpacity }}
           className="flex flex-col"
         >
           {/* BIG NAME HEADLINE: UBAID QUAZI (Massive Scale & Animated) */}
-          <div className="mb-4 sm:mb-6 lg:mb-8">
+          <div className="mb-6 sm:mb-10">
             {/* Line 1: UBAID */}
             <motion.div
               variants={nameContainerVariants}
@@ -124,7 +124,7 @@ export default function Hero() {
               variants={nameContainerVariants}
               initial="hidden"
               animate="visible"
-              className="overflow-hidden pl-2 sm:pl-12 md:pl-24 lg:pl-36 -mt-1 sm:-mt-3"
+              className="overflow-hidden pl-4 sm:pl-16 md:pl-28 lg:pl-44 -mt-2 sm:-mt-4"
             >
               <div className="hero-name uppercase flex items-baseline">
                 {'QUAZI'.split('').map((char, index) => {
@@ -157,17 +157,17 @@ export default function Hero() {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="pt-3 sm:pt-5 border-t border-white/[0.08] max-w-4xl"
+            className="pt-5 sm:pt-8 border-t border-white/[0.08] max-w-5xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm mb-2 sm:mb-3">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
-              <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-neutral-200">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.05] backdrop-blur-sm mb-4">
+              <span className="h-2 w-2 rounded-full bg-[#FF5A4F]" />
+              <span className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-neutral-100">
                 CS &ndash; DATA SCIENCE ENGINEERING STUDENT &bull; FULL-STACK &amp; AI
               </span>
             </div>
 
             {/* Statement: BUILDING INTELLIGENT EXPERIENCES */}
-            <h2 className="hero-substatement font-bold uppercase tracking-tight text-neutral-200">
+            <h2 className="hero-substatement font-extrabold uppercase tracking-tight text-white">
               BUILDING{' '}
               <span className="text-lava-glow font-light inline-block px-1">
                 INTELLIGENT
@@ -176,7 +176,7 @@ export default function Hero() {
             </h2>
 
             {/* Supporting description */}
-            <p className="text-sm sm:text-base font-light text-neutral-400 mt-2 sm:mt-3 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-xl font-light text-neutral-300 mt-4 max-w-3xl leading-relaxed">
               Computer Science &ndash; Data Science Engineering student building production web applications and exploring the intersection of AI, computer vision, and the modern web.
             </p>
           </motion.div>
@@ -188,14 +188,14 @@ export default function Hero() {
         variants={itemVariants}
         initial="hidden"
         animate="visible"
-        className="w-full max-w-[1400px] mx-auto flex items-end justify-between pt-4 border-t border-white/[0.08]"
+        className="w-full max-w-[1400px] mx-auto flex items-end justify-between pt-5 border-t border-white/[0.08]"
       >
         {/* Bottom Left */}
         <div className="flex flex-col">
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-neutral-400">
             CS &ndash; DATA SCIENCE ENGINEERING STUDENT
           </span>
-          <span className="text-xs font-mono uppercase tracking-widest text-white mt-0.5">
+          <span className="text-sm sm:text-base font-mono uppercase tracking-widest text-white font-bold mt-0.5">
             UBAID QUAZI &mdash; FULL-STACK &amp; AI
           </span>
         </div>

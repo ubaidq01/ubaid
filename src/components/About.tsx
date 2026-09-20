@@ -53,10 +53,10 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-4"
           >
-            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-2">
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-3 font-semibold">
               DISCIPLINE &amp; PHILOSOPHY
             </span>
-            <h3 className="text-xl font-light text-neutral-200 tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-light text-neutral-100 tracking-tight leading-snug">
               Engineering with mathematical depth, computational rigor, and creative discipline.
             </h3>
           </motion.div>
@@ -69,14 +69,14 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="md:col-span-8 space-y-6"
           >
-            <p className="text-xl sm:text-2xl font-light text-neutral-300 leading-relaxed">
-              I&apos;m <strong className="text-white font-medium">Ubaid Quazi</strong>, a{' '}
-              <span className="text-white font-semibold underline decoration-[#FF5A4F] decoration-2 underline-offset-4">
+            <p className="text-2xl sm:text-3xl font-light text-neutral-200 leading-relaxed">
+              I&apos;m <strong className="text-white font-semibold">Ubaid Quazi</strong>, a{' '}
+              <span className="text-white font-bold underline decoration-[#FF5A4F] decoration-2 underline-offset-4">
                 Computer Science &ndash; Data Science Engineering student
               </span>{' '}
               and developer focused on full-stack web platforms, artificial intelligence, computer vision, and practical software products.
             </p>
-            <p className="text-base text-neutral-400 font-light leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-3xl">
               Rather than assembling generic templates, I bridge statistical data science and algorithmic engineering with production web architectures —
               whether that means eliminating tournament coordination chaos with Next.js &amp; Supabase,
               deploying zero-latency on-device vision models via WebGPU &amp; ONNX, or preventing physical quishing attacks with computer vision forensics.
@@ -92,32 +92,32 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#FF5A4F]/40 transition-all duration-300 group flex flex-col justify-between"
+            className="relative p-7 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/[0.1] hover:border-[#FF5A4F]/40 transition-all duration-300 group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#FF5A4F] font-semibold">
                   [ 01 // ACADEMIC DISCIPLINE ]
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#FF5A4F]/10 text-[#FF5A4F] border border-[#FF5A4F]/20 font-semibold">
+                <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-[#FF5A4F]/10 text-[#FF5A4F] border border-[#FF5A4F]/20 font-bold">
                   STUDENT
                 </span>
               </div>
-              <h4 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-white mb-1.5 group-hover:text-white transition-colors">
+              <h4 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2 group-hover:text-white transition-colors">
                 Computer Science &amp; Engineering
               </h4>
-              <p className="text-xs sm:text-sm font-mono text-[#FF7A00] mb-3">
+              <p className="text-sm sm:text-base font-mono text-[#FF7A00] font-semibold mb-3">
                 Specialization: Data Science
               </p>
-              <p className="text-xs sm:text-sm font-light text-neutral-400 leading-relaxed">
+              <p className="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
                 Focused on statistical analysis, machine learning pipelines, predictive modeling, and computational theory alongside core Computer Science fundamentals (DSA, OOP in Java/C++, DBMS, OS, Networks).
               </p>
             </div>
-            <div className="flex flex-wrap gap-1.5 pt-5 mt-5 border-t border-white/[0.06]">
+            <div className="flex flex-wrap gap-2 pt-5 mt-5 border-t border-white/[0.08]">
               {['Data Science', 'Machine Learning', 'Data Structures', 'Algorithms', 'Python', 'C++'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-white/[0.04] text-neutral-300 border border-white/[0.06]"
+                  className="text-xs font-mono px-3 py-1 rounded bg-white/[0.05] text-neutral-200 border border-white/10 font-medium"
                 >
                   {tag}
                 </span>
@@ -131,32 +131,32 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-white/25 transition-all duration-300 group flex flex-col justify-between"
+            className="relative p-7 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/[0.1] hover:border-white/30 transition-all duration-300 group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-neutral-400">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-neutral-300 font-semibold">
                   [ 02 // WEB ARCHITECTURE ]
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.05] text-neutral-300 border border-white/10">
+                <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-white/[0.08] text-neutral-200 border border-white/15 font-semibold">
                   PRODUCTION
                 </span>
               </div>
-              <h4 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-white mb-1.5">
+              <h4 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2">
                 Modern Full-Stack Systems
               </h4>
-              <p className="text-xs sm:text-sm font-mono text-neutral-400 mb-3">
+              <p className="text-sm sm:text-base font-mono text-neutral-300 font-semibold mb-3">
                 Next.js, TypeScript &amp; Supabase
               </p>
-              <p className="text-xs sm:text-sm font-light text-neutral-400 leading-relaxed">
+              <p className="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
                 Engineering responsive, highly interactive web applications with real-time relational databases, multi-step verification pipelines, role-based dashboards, and modular state architecture.
               </p>
             </div>
-            <div className="flex flex-wrap gap-1.5 pt-5 mt-5 border-t border-white/[0.06]">
+            <div className="flex flex-wrap gap-2 pt-5 mt-5 border-t border-white/[0.08]">
               {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-white/[0.04] text-neutral-300 border border-white/[0.06]"
+                  className="text-xs font-mono px-3 py-1 rounded bg-white/[0.05] text-neutral-200 border border-white/10 font-medium"
                 >
                   {tag}
                 </span>
@@ -170,32 +170,32 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-[#8B7CFF]/40 transition-all duration-300 group flex flex-col justify-between"
+            className="relative p-7 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/[0.1] hover:border-[#8B7CFF]/50 transition-all duration-300 group flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#8B7CFF]">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#8B7CFF] font-semibold">
                   [ 03 // INTELLIGENT SYSTEMS ]
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#8B7CFF]/10 text-[#8B7CFF] border border-[#8B7CFF]/20">
-                  APPLIED AI
+                <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-[#8B7CFF]/15 text-[#8B7CFF] border border-[#8B7CFF]/30 font-semibold">
+                  EDGE &amp; AI
                 </span>
               </div>
-              <h4 className="text-lg sm:text-xl font-bold uppercase tracking-tight text-white mb-1.5">
-                Edge AI &amp; Computer Vision
+              <h4 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2">
+                Edge AI &amp; Vision Systems
               </h4>
-              <p className="text-xs sm:text-sm font-mono text-[#8B7CFF] mb-3">
-                ONNX WebGPU &amp; OpenCV Forensics
+              <p className="text-sm sm:text-base font-mono text-[#8B7CFF] font-semibold mb-3">
+                WebGPU, ONNX Runtime &amp; OpenCV
               </p>
-              <p className="text-xs sm:text-sm font-light text-neutral-400 leading-relaxed">
-                Deploying hardware-accelerated neural inference directly inside browser runtimes without cloud latency, and utilizing computer vision heuristics to detect security anomalies.
+              <p className="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
+                Pioneering client-side computer vision models running lightweight neural networks directly inside browsers via WebGPU compute shaders, zero-latency inference, and vision forensics.
               </p>
             </div>
-            <div className="flex flex-wrap gap-1.5 pt-5 mt-5 border-t border-white/[0.06]">
-              {['ONNX Runtime', 'WebGPU', 'OpenCV', 'PyTorch', 'Edge Vision'].map((tag) => (
+            <div className="flex flex-wrap gap-2 pt-5 mt-5 border-t border-white/[0.08]">
+              {['Computer Vision', 'WebGPU', 'ONNX Runtime', 'OpenCV', 'Neural Networks', 'Python'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-mono px-2.5 py-0.5 rounded bg-white/[0.04] text-neutral-300 border border-white/[0.06]"
+                  className="text-xs font-mono px-3 py-1 rounded bg-white/[0.05] text-neutral-200 border border-white/10 font-medium"
                 >
                   {tag}
                 </span>

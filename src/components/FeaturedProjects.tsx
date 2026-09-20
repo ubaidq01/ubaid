@@ -215,7 +215,7 @@ export default function FeaturedProjects() {
   return (
     <section
       id="projects"
-      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background Lighting */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full bg-[#FF5A4F]/5 blur-[160px] pointer-events-none -z-10" />
@@ -223,10 +223,10 @@ export default function FeaturedProjects() {
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 sm:mb-24 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-[#FF5A4F] font-semibold">
                 [ 03 // PORTFOLIO ]
               </span>
               <div className="h-px w-12 bg-white/10" />
@@ -234,19 +234,19 @@ export default function FeaturedProjects() {
             <h2 className="editorial-statement font-extrabold uppercase tracking-tight text-white">
               SELECTED WORK<span className="text-[#FF5A4F]">.</span>
             </h2>
-            <p className="text-xs sm:text-sm font-mono tracking-widest uppercase text-neutral-500 mt-2">
+            <p className="text-sm sm:text-base font-mono tracking-widest uppercase text-neutral-400 mt-2 font-semibold">
               PROJECTS I&apos;VE BUILT
             </p>
           </div>
 
-          <p className="max-w-md text-sm sm:text-base font-light text-neutral-400">
+          <p className="max-w-lg text-base sm:text-lg font-light text-neutral-300 leading-relaxed">
             Engineered systems designed to turn complex algorithmic and operational requirements into
             clean, dependable software.
           </p>
         </div>
 
         {/* Large Horizontal Project Panels */}
-        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+        <div className="space-y-16 sm:space-y-24 lg:space-y-28">
           {FEATURED_PROJECTS.map((project, index) => {
             const projectNumber = `0${index + 1} / 03`;
 
@@ -265,7 +265,7 @@ export default function FeaturedProjects() {
                     setSelectedProject(project);
                   }
                 }}
-                className="group relative cursor-pointer border-t border-white/[0.08] pt-12 sm:pt-16"
+                className="group relative cursor-pointer border-t border-white/[0.08] pt-14 sm:pt-20"
               >
                 {/* Panel Layout: Two-column Editorial Split */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -273,21 +273,21 @@ export default function FeaturedProjects() {
                   <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                     {/* Index & Category */}
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-mono text-neutral-500 group-hover:text-[#FF5A4F] transition-colors">
+                      <span className="text-sm sm:text-base font-mono text-neutral-400 group-hover:text-[#FF5A4F] transition-colors font-semibold">
                         {projectNumber}
                       </span>
-                      <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+                      <span className="text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-300 font-semibold">
                         {project.category}
                       </span>
                     </div>
 
                     {/* Project Title */}
-                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white group-hover:translate-x-1.5 transition-transform duration-300">
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white group-hover:translate-x-1.5 transition-transform duration-300">
                       {project.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-base text-neutral-400 font-light leading-relaxed">
+                    <p className="text-base sm:text-xl text-neutral-300 font-light leading-relaxed">
                       {project.description}
                     </p>
 
@@ -296,7 +296,7 @@ export default function FeaturedProjects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-mono px-3 py-1 rounded-full border border-white/[0.08] text-neutral-400 group-hover:border-white/20 transition-colors"
+                          className="text-xs sm:text-sm font-mono px-3.5 py-1.5 rounded-full border border-white/10 text-neutral-300 group-hover:border-white/25 transition-colors bg-white/[0.02]"
                         >
                           {tech}
                         </span>
@@ -311,10 +311,10 @@ export default function FeaturedProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF5A4F] text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(255,90,79,0.3)]"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FF5A4F] text-black text-xs sm:text-sm font-mono font-bold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(255,90,79,0.35)]"
                         >
                           <span>LAUNCH LIVE APP</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
+                          <ExternalLink className="w-4 h-4" />
                         </a>
                       ) : null}
 
@@ -323,10 +323,10 @@ export default function FeaturedProjects() {
                           e.stopPropagation();
                           setSelectedProject(project);
                         }}
-                        className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 hover:text-[#FF5A4F] transition-colors focus:outline-none"
+                        className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-neutral-200 hover:text-[#FF5A4F] transition-colors focus:outline-none"
                       >
                         <span>CASE STUDY</span>
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </button>
 
                       {project.githubUrl && (
@@ -335,9 +335,9 @@ export default function FeaturedProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-white transition-colors flex items-center gap-1.5"
+                          className="text-xs sm:text-sm font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1.5 font-medium"
                         >
-                          <GithubIcon className="w-3.5 h-3.5" />
+                          <GithubIcon className="w-4 h-4" />
                           <span>Code</span>
                         </a>
                       )}

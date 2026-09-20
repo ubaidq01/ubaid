@@ -122,33 +122,33 @@ body {
   background-size: 24px 24px;
 }
 
-/* Typography Scale - Dynamically adapted for desktop, laptop & mobile devices */
+/* Typography Scale - Bold, prominent & high visibility */
 .hero-name {
-  font-size: clamp(3.25rem, min(12.5vw, 12vh), 11.5rem);
+  font-size: clamp(4.5rem, 14vw, 12rem);
   line-height: 0.88;
   letter-spacing: -0.04em;
 }
 
 .hero-substatement {
-  font-size: clamp(1.4rem, min(3.8vw, 3.8vh), 3rem);
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .hero-title {
-  font-size: clamp(3rem, min(10vw, 10vh), 9.5rem);
+  font-size: clamp(3.5rem, 11vw, 10rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
 }
 
 .editorial-statement {
-  font-size: clamp(2.5rem, 6.5vw, 6rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 7.5vw, 6.75rem);
+  line-height: 0.94;
   letter-spacing: -0.03em;
 }
 
 .editorial-heading {
-  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  font-size: clamp(3.5rem, 8.5vw, 7.5rem);
   line-height: 0.92;
   letter-spacing: -0.03em;
 }

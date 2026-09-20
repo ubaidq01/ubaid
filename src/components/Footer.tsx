@@ -12,59 +12,59 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] py-10 sm:py-14 px-4 sm:px-8 lg:px-12">
-      <div className="w-full max-w-[1400px] mx-auto space-y-8">
+    <footer className="w-full bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] py-12 sm:py-16 px-4 sm:px-8 lg:px-12">
+      <div className="w-full max-w-[1400px] mx-auto space-y-10">
         {/* Main 3-column studio row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Left: UQ. */}
           <div>
             <Link
               href="#hero"
-              className="text-2xl font-black tracking-tighter text-white hover:text-[#FF5A4F] transition-colors"
+              className="text-3xl sm:text-4xl font-black tracking-tighter text-white hover:text-[#FF5A4F] transition-colors"
             >
               UQ<span className="text-[#FF5A4F]">.</span>
             </Link>
           </div>
 
           {/* Center: BUILDING DIGITAL EXPERIENCES. */}
-          <div className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-neutral-400">
+          <div className="text-sm sm:text-base font-mono uppercase tracking-[0.25em] text-neutral-300 font-medium">
             BUILDING DIGITAL EXPERIENCES.
           </div>
 
           {/* Right: GitHub & LinkedIn */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             <a
               href={PERSONAL_INFO.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors"
+              className="flex items-center gap-2.5 text-sm sm:text-base font-mono uppercase tracking-wider text-neutral-300 hover:text-white transition-colors"
             >
-              <GithubIcon className="w-4 h-4" />
+              <GithubIcon className="w-5 h-5" />
               <span>GitHub</span>
             </a>
             <a
               href={PERSONAL_INFO.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors"
+              className="flex items-center gap-2.5 text-sm sm:text-base font-mono uppercase tracking-wider text-neutral-300 hover:text-white transition-colors"
             >
-              <LinkedinIcon className="w-4 h-4" />
+              <LinkedinIcon className="w-5 h-5" />
               <span>LinkedIn</span>
             </a>
           </div>
         </div>
 
         {/* Bottom row: Copyright & Back to top */}
-        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-white/[0.04] pt-8 text-xs font-mono text-neutral-600 gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-white/[0.06] pt-8 text-xs sm:text-sm font-mono text-neutral-400 gap-4">
           <div>© 2026 Ubaid Quazi. All rights reserved.</div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-neutral-500 hover:text-[#FF5A4F] transition-colors focus:outline-none"
+            className="flex items-center gap-2 text-neutral-300 hover:text-[#FF5A4F] transition-colors focus:outline-none cursor-pointer font-semibold"
             aria-label="Back to top"
           >
             <span>BACK TO TOP</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <ArrowUp className="w-4 h-4" />
           </button>
         </div>
       </div>

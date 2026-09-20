@@ -25,22 +25,22 @@ export default function AiFocus() {
   return (
     <section
       id="ai-focus"
-      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Ambient Cool & Warm Radiance */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-r from-[#8B7CFF]/10 via-transparent to-[#FF5A4F]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Top small label */}
-        <div className="flex items-center gap-3 mb-6 sm:mb-10">
-          <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#8B7CFF]">
+        <div className="flex items-center gap-3 mb-8 sm:mb-12">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-[#8B7CFF] font-semibold">
             [ 04 // CURRENTLY EXPLORING ]
           </span>
           <div className="h-px w-12 bg-white/10" />
         </div>
 
         {/* Huge Headline: AI × WEB */}
-        <div className="mb-8 sm:mb-12">
+        <div className="mb-10 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function AiFocus() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-xl sm:text-3xl font-light text-neutral-300 max-w-3xl mt-6 leading-relaxed"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-neutral-200 max-w-4xl mt-6 leading-relaxed"
           >
             Exploring how artificial intelligence, computer vision, and modern web technologies can
             work together.
@@ -82,30 +82,30 @@ export default function AiFocus() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="relative flex flex-col justify-between p-8 rounded-2xl bg-[#0D0D0F] border border-white/[0.06] hover:border-white/20 transition-all duration-300 group"
+                className="relative flex flex-col justify-between p-8 sm:p-9 rounded-2xl bg-[#0D0D0F] border border-white/10 hover:border-[#8B7CFF]/40 transition-all duration-300 group shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF5A4F]">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#FF5A4F] font-bold">
                       0{index + 1}
                     </span>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-500">
+                    <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 font-semibold">
                       {node.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white mb-3 group-hover:text-[#8B7CFF] transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-3 group-hover:text-[#8B7CFF] transition-colors">
                     {node.title}
                   </h3>
 
-                  <p className="text-sm font-light text-neutral-400 leading-relaxed">
+                  <p className="text-base sm:text-lg font-light text-neutral-300 leading-relaxed">
                     {node.subtitle}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-white/[0.04] flex items-center justify-between text-[11px] font-mono text-neutral-600">
+                <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-neutral-500">
                   <span>SUBSYSTEM</span>
-                  <span className="text-neutral-400 group-hover:text-white transition-colors">
+                  <span className="text-neutral-300 group-hover:text-white transition-colors font-medium">
                     ACTIVE PIPELINE
                   </span>
                 </div>

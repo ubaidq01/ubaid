@@ -38,17 +38,17 @@ export default function TechStack() {
   return (
     <section
       id="skills"
-      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle Radial Glow */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] rounded-full bg-[#FF5A4F]/6 blur-[150px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-16 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-20 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-[#FF5A4F] font-semibold">
                 [ 02 // CAPABILITIES ]
               </span>
               <div className="h-px w-12 bg-white/10" />
@@ -58,14 +58,14 @@ export default function TechStack() {
             </h2>
           </div>
 
-          <p className="max-w-md text-sm sm:text-base font-light text-neutral-400">
+          <p className="max-w-lg text-base sm:text-lg font-light text-neutral-300">
             A curated toolkit spanning full-stack web engineering, edge artificial intelligence, and
             computer vision perception.
           </p>
         </div>
 
         {/* Primary Flowing Typography List */}
-        <div className="flex flex-wrap items-baseline gap-x-6 sm:gap-x-10 gap-y-6 sm:gap-y-8 py-8 border-t border-b border-white/[0.08]">
+        <div className="flex flex-wrap items-baseline gap-x-8 sm:gap-x-12 gap-y-8 sm:gap-y-12 py-10 sm:py-14 border-t border-b border-white/[0.08]">
           {primaryTools.map((tool) => {
             const isHovered = hoveredTech === tool.name;
             return (
@@ -79,17 +79,17 @@ export default function TechStack() {
                 <motion.span
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-                  className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight transition-all duration-300 ${
+                  className={`text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight transition-all duration-300 ${
                     isHovered
                       ? 'text-white font-medium drop-shadow-[0_0_24px_rgba(255,90,79,0.35)]'
-                      : 'text-neutral-400 hover:text-white'
+                      : 'text-neutral-300 hover:text-white'
                   }`}
                 >
                   {tool.name}
                 </motion.span>
 
                 {/* Subtle separator dot */}
-                <span className="ml-6 sm:ml-10 text-neutral-700 select-none text-xl sm:text-3xl font-thin">
+                <span className="ml-8 sm:ml-12 text-neutral-700 select-none text-2xl sm:text-4xl font-thin">
                   /
                 </span>
 
@@ -100,12 +100,12 @@ export default function TechStack() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 -top-12 z-20 hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0D0D0F] border border-white/20 text-xs font-mono shadow-xl pointer-events-none whitespace-nowrap"
+                    className="absolute left-0 -top-12 z-20 hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D0D0F] border border-white/20 text-xs sm:text-sm font-mono shadow-xl pointer-events-none whitespace-nowrap"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
+                    <span className="h-2 w-2 rounded-full bg-[#FF5A4F]" />
                     <span className="text-white font-medium">{tool.category}</span>
                     <span className="text-neutral-500">—</span>
-                    <span className="text-neutral-400">{tool.desc}</span>
+                    <span className="text-neutral-300">{tool.desc}</span>
                   </motion.div>
                 )}
               </div>
@@ -114,15 +114,15 @@ export default function TechStack() {
         </div>
 
         {/* Secondary Supporting Tools in Monospace */}
-        <div className="mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
+        <div className="mt-14 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-neutral-400 font-semibold">
             ADDITIONAL RUNTIMES &amp; ENVIRONMENTS:
           </span>
           <div className="flex flex-wrap items-center gap-3">
             {secondaryTools.map((tool) => (
               <span
                 key={tool}
-                className="text-xs font-mono tracking-wider px-3 py-1 rounded-full border border-white/[0.08] text-neutral-400 hover:text-white hover:border-white/20 transition-colors"
+                className="text-xs sm:text-sm font-mono tracking-wider px-4 py-1.5 rounded-full border border-white/10 text-neutral-300 hover:text-white hover:border-white/30 transition-colors bg-white/[0.02]"
               >
                 {tool}
               </span>

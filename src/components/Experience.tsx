@@ -50,17 +50,17 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-20 sm:py-28 lg:py-32 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle Ambient Radial Glow */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] rounded-full bg-[#FF5A4F]/5 blur-[150px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-16 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 sm:mb-24 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-[#FF5A4F] font-semibold">
                 [ 05 // EXPERIENCE &amp; TIMELINE ]
               </span>
               <div className="h-px w-12 bg-white/10" />
@@ -70,7 +70,7 @@ export default function Experience() {
             </h2>
           </div>
 
-          <p className="max-w-md text-sm sm:text-base font-light text-neutral-400">
+          <p className="max-w-lg text-base sm:text-lg font-light text-neutral-300 leading-relaxed">
             A chronological timeline of academic rigor, production software delivery, and intelligent
             systems exploration.
           </p>
@@ -85,39 +85,39 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-10 py-10 sm:py-14 border-b border-white/[0.06] hover:border-white/20 transition-colors"
+              className="group grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-10 py-12 sm:py-16 border-b border-white/[0.08] hover:border-white/30 transition-colors"
             >
               {/* Left Column: Year / Category */}
-              <div className="md:col-span-4 flex flex-col justify-between space-y-2">
+              <div className="md:col-span-4 flex flex-col justify-between space-y-3">
                 <div>
-                  <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block">
+                  <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block font-semibold">
                     {entry.period}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white mt-1 group-hover:text-white transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mt-2 group-hover:text-white transition-colors">
                     {entry.category}
                   </h3>
                 </div>
-                <span className="text-[10px] font-mono text-neutral-600 hidden md:block">
+                <span className="text-xs font-mono text-neutral-500 hidden md:block font-medium">
                   MILESTONE 0{index + 1}
                 </span>
               </div>
 
               {/* Right Column: Role / Activity & Description */}
               <div className="md:col-span-8 space-y-4">
-                <h4 className="text-lg sm:text-xl font-light text-neutral-200">
+                <h4 className="text-xl sm:text-2xl font-light text-neutral-100">
                   {entry.role}
                 </h4>
 
-                <p className="text-sm sm:text-base font-light text-neutral-400 leading-relaxed max-w-3xl">
+                <p className="text-base sm:text-lg font-light text-neutral-300 leading-relaxed max-w-3xl">
                   {entry.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 pt-2">
+                <div className="flex flex-wrap gap-2.5 pt-2">
                   {entry.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-mono px-3 py-1 rounded-full border border-white/[0.06] text-neutral-400 group-hover:border-white/15 transition-colors"
+                      className="text-xs sm:text-sm font-mono px-3.5 py-1.5 rounded-full border border-white/10 text-neutral-300 group-hover:border-white/25 transition-colors bg-white/[0.02]"
                     >
                       {tag}
                     </span>

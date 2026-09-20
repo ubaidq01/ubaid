@@ -86,7 +86,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen flex flex-col justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col justify-center py-20 sm:py-24 lg:py-28 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle Warm Accent Radiance */}
       <div className="absolute top-1/3 right-1/4 w-[650px] h-[650px] rounded-full bg-[#FF5A4F]/10 blur-[170px] pointer-events-none -z-10" />
@@ -94,11 +94,11 @@ export default function Contact() {
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Top small label */}
-        <div className="flex items-center gap-3 mb-6 sm:mb-10">
-          <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
+        <div className="flex items-center gap-3 mb-8 sm:mb-12">
+          <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.25em] text-[#FF5A4F] font-semibold">
             [ 06 // GET IN TOUCH ]
           </span>
-          <div className="h-px w-12 bg-white/10" />
+          <div className="h-px w-14 bg-white/15" />
         </div>
 
         {/* Huge Editorial Heading */}
@@ -131,7 +131,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg sm:text-2xl font-light text-neutral-300 mt-6 max-w-2xl leading-relaxed"
+            className="text-xl sm:text-2xl lg:text-3xl font-light text-neutral-300 mt-6 max-w-3xl leading-relaxed"
           >
             Have a project in mind? I&apos;d love to hear about it. Let&apos;s build something useful
             together.
@@ -144,34 +144,34 @@ export default function Contact() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-10">
             <div className="space-y-8">
               {/* Direct Email with Elevated Card Interaction */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-white/[0.05] via-[#0E0E12] to-transparent border border-white/10 hover:border-[#FF5A4F]/40 transition-all duration-300 group shadow-lg">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#FF5A4F] flex items-center gap-1.5 font-semibold">
-                    <Mail className="w-3.5 h-3.5" />
+              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-white/[0.05] via-[#0E0E12] to-transparent border border-white/10 hover:border-[#FF5A4F]/40 transition-all duration-300 group shadow-lg">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] flex items-center gap-2 font-bold">
+                    <Mail className="w-4 h-4" />
                     <span>DIRECT INQUIRIES</span>
                   </span>
-                  <span className="text-[10px] font-mono text-neutral-500 uppercase">
+                  <span className="text-xs font-mono text-neutral-400 uppercase font-semibold">
                     PRIMARY INBOX
                   </span>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-1">
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-1">
                   <a
                     href={`mailto:${PERSONAL_INFO.email}`}
-                    className="text-xl sm:text-2xl md:text-3xl font-mono font-bold tracking-tight text-white group-hover:text-[#FF5A4F] transition-colors"
+                    className="text-2xl sm:text-3xl md:text-4xl font-mono font-black tracking-tight text-white group-hover:text-[#FF5A4F] transition-colors break-all sm:break-normal"
                   >
                     {PERSONAL_INFO.email}
                   </a>
 
                   <button
                     onClick={handleCopyEmail}
-                    className="p-2.5 rounded-xl border border-white/15 bg-white/[0.06] hover:bg-[#FF5A4F] hover:text-black hover:border-[#FF5A4F] text-neutral-300 transition-all duration-200 cursor-pointer flex items-center gap-2 text-xs font-mono"
+                    className="px-4 py-3 rounded-xl border border-white/15 bg-white/[0.06] hover:bg-[#FF5A4F] hover:text-black hover:border-[#FF5A4F] text-neutral-200 transition-all duration-200 cursor-pointer flex items-center gap-2 text-xs sm:text-sm font-mono font-bold"
                     aria-label="Copy email address"
                   >
                     {copiedEmail ? (
                       <>
                         <Check className="w-4 h-4 text-emerald-300" />
-                        <span className="text-emerald-300 font-semibold">COPIED</span>
+                        <span className="text-emerald-300 font-bold">COPIED</span>
                       </>
                     ) : (
                       <>
@@ -186,35 +186,35 @@ export default function Contact() {
               {/* LOCATION & AVAILABILITY - PROMINENTLY HIGHLIGHTED CARDS */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* 1. Location Highlight Card */}
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-[#FF5A4F]/10 via-[#0D0D10] to-[#070707] border border-[#FF5A4F]/25 hover:border-[#FF5A4F]/50 transition-all duration-300 shadow-md">
-                  <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-[#FF5A4F] font-semibold mb-2">
-                    <MapPin className="w-3.5 h-3.5" />
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-[#FF5A4F]/10 via-[#0D0D10] to-[#070707] border border-[#FF5A4F]/25 hover:border-[#FF5A4F]/50 transition-all duration-300 shadow-md">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#FF5A4F] font-bold mb-2">
+                    <MapPin className="w-4 h-4" />
                     <span>LOCATION / BASE</span>
                   </div>
-                  <div className="text-2xl font-black text-white uppercase tracking-tight">
+                  <div className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
                     {PERSONAL_INFO.location}
                   </div>
-                  <div className="text-xs font-mono text-neutral-400 mt-1">
+                  <div className="text-xs sm:text-sm font-mono text-neutral-300 mt-2">
                     IST (UTC+5:30) • Remote &amp; Relocation Open
                   </div>
                 </div>
 
                 {/* 2. Availability Highlight Card (Glowing Emerald Beacon) */}
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-emerald-500/15 via-[#0D0D10] to-[#070707] border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 shadow-[0_0_25px_-5px_rgba(16,185,129,0.18)]">
-                  <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400 font-semibold mb-2">
-                    <Radio className="w-3.5 h-3.5 animate-pulse" />
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/15 via-[#0D0D10] to-[#070707] border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 shadow-[0_0_25px_-5px_rgba(16,185,129,0.18)]">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-emerald-400 font-bold mb-2">
+                    <Radio className="w-4 h-4 animate-pulse" />
                     <span>AVAILABILITY STATUS</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <span className="relative flex h-3 w-3">
+                  <div className="flex items-center gap-3">
+                    <span className="relative flex h-3.5 w-3.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500 shadow-[0_0_8px_#10B981]"></span>
+                      <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 shadow-[0_0_10px_#10B981]"></span>
                     </span>
-                    <span className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">
+                    <span className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
                       AVAILABLE
                     </span>
                   </div>
-                  <div className="text-xs font-mono text-emerald-300/80 mt-1">
+                  <div className="text-xs sm:text-sm font-mono text-emerald-300/90 mt-2 font-medium">
                     Open to opportunities &amp; projects
                   </div>
                 </div>
@@ -223,31 +223,31 @@ export default function Contact() {
 
             {/* Social Links as High-End Interactive Cards */}
             <div className="space-y-3 pt-4 border-t border-white/[0.08]">
-              <span className="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-400 block mb-3 font-semibold">
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-neutral-300 block mb-3 font-semibold">
                 VERIFIED SOCIALS &amp; PROFILES
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {/* GitHub */}
                 <a
                   href={PERSONAL_INFO.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between p-4 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white transition-all duration-300"
+                  className="group flex items-center justify-between p-4 sm:p-5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white transition-all duration-300"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-white/[0.05] group-hover:bg-[#FF5A4F]/20 transition-colors">
-                      <GithubIcon className="w-4 h-4 text-white group-hover:text-[#FF5A4F] transition-colors" />
+                  <div className="flex items-center gap-3.5">
+                    <div className="p-2.5 rounded-lg bg-white/[0.05] group-hover:bg-[#FF5A4F]/20 transition-colors">
+                      <GithubIcon className="w-5 h-5 text-white group-hover:text-[#FF5A4F] transition-colors" />
                     </div>
                     <div>
-                      <span className="text-xs font-mono font-bold uppercase tracking-wider block">
+                      <span className="text-sm sm:text-base font-mono font-bold uppercase tracking-wider block">
                         GitHub
                       </span>
-                      <span className="text-[11px] font-mono text-neutral-500 group-hover:text-neutral-300">
+                      <span className="text-xs sm:text-sm font-mono text-neutral-400 group-hover:text-neutral-200">
                         @ubaidq01
                       </span>
                     </div>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-[#FF5A4F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <ArrowUpRight className="w-5 h-5 text-neutral-400 group-hover:text-[#FF5A4F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </a>
 
                 {/* LinkedIn */}
@@ -255,22 +255,22 @@ export default function Contact() {
                   href={PERSONAL_INFO.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between p-4 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white transition-all duration-300"
+                  className="group flex items-center justify-between p-4 sm:p-5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-white/25 text-neutral-300 hover:text-white transition-all duration-300"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-white/[0.05] group-hover:bg-[#0077B5]/20 transition-colors">
-                      <LinkedinIcon className="w-4 h-4 text-white group-hover:text-[#0A66C2] transition-colors" />
+                  <div className="flex items-center gap-3.5">
+                    <div className="p-2.5 rounded-lg bg-white/[0.05] group-hover:bg-[#0077B5]/20 transition-colors">
+                      <LinkedinIcon className="w-5 h-5 text-white group-hover:text-[#0A66C2] transition-colors" />
                     </div>
                     <div>
-                      <span className="text-xs font-mono font-bold uppercase tracking-wider block">
+                      <span className="text-sm sm:text-base font-mono font-bold uppercase tracking-wider block">
                         LinkedIn
                       </span>
-                      <span className="text-[11px] font-mono text-neutral-500 group-hover:text-neutral-300">
+                      <span className="text-xs sm:text-sm font-mono text-neutral-400 group-hover:text-neutral-200">
                         Ubaid Quazi
                       </span>
                     </div>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-[#FF5A4F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <ArrowUpRight className="w-5 h-5 text-neutral-400 group-hover:text-[#FF5A4F] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </a>
               </div>
             </div>
@@ -278,23 +278,23 @@ export default function Contact() {
 
           {/* RIGHT COLUMN: High-End Attractive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="relative p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-[#0E0E12] via-[#09090C] to-[#070707] border border-white/15 shadow-2xl overflow-hidden">
+            <div className="relative p-8 sm:p-12 rounded-2xl bg-gradient-to-b from-[#0E0E12] via-[#09090C] to-[#070707] border border-white/15 shadow-2xl overflow-hidden">
               {/* Subtle volcanic ambient glow behind form */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF5A4F]/10 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#8B7CFF]/8 rounded-full blur-3xl pointer-events-none" />
 
               {/* Form Top Title Bar */}
-              <div className="relative z-10 flex items-center justify-between border-b border-white/[0.08] pb-5 mb-8">
+              <div className="relative z-10 flex items-center justify-between border-b border-white/[0.08] pb-6 mb-8">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold uppercase tracking-tight text-white flex items-center gap-2">
+                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
                     <span>SEND A MESSAGE</span>
-                    <Sparkles className="w-4 h-4 text-[#FF5A4F]" />
+                    <Sparkles className="w-5 h-5 text-[#FF5A4F]" />
                   </h3>
-                  <p className="text-xs font-mono text-neutral-400 mt-1">
+                  <p className="text-xs sm:text-sm font-mono text-neutral-300 mt-2">
                     Direct communication line • Instant inbox delivery
                   </p>
                 </div>
-                <span className="hidden sm:inline-block text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border border-white/10 bg-white/[0.04] text-neutral-400">
+                <span className="hidden sm:inline-block text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.04] text-neutral-300 font-semibold">
                   FAST RESPONSE
                 </span>
               </div>
@@ -305,13 +305,13 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="py-16 text-center space-y-4 relative z-10"
                 >
-                  <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 mx-auto flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                    <Check className="w-7 h-7" />
+                  <div className="w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 mx-auto flex items-center justify-center shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <Check className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
+                  <h3 className="text-2xl sm:text-4xl font-black uppercase tracking-tight text-white">
                     MESSAGE TRANSMITTED
                   </h3>
-                  <p className="text-sm font-light text-neutral-300 max-w-sm mx-auto">
+                  <p className="text-base font-light text-neutral-300 max-w-sm mx-auto">
                     Thank you for getting in touch, <span className="text-white font-medium">Ubaid</span> has received your note and will get back to you promptly.
                   </p>
                 </motion.div>
@@ -321,9 +321,9 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300 mb-2 font-semibold"
+                      className="flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-200 mb-2.5 font-bold"
                     >
-                      <User className="w-3.5 h-3.5 text-[#FF5A4F]" />
+                      <User className="w-4 h-4 text-[#FF5A4F]" />
                       <span>YOUR NAME *</span>
                     </label>
                     <input
@@ -335,12 +335,12 @@ export default function Contact() {
                         if (errors.name) setErrors({ ...errors, name: '' });
                       }}
                       placeholder="e.g. Alex Mercer"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-[#070707] border ${
+                      className={`w-full px-5 py-4 sm:py-4.5 rounded-xl bg-[#070707] border ${
                         errors.name ? 'border-red-500' : 'border-white/15'
-                      } text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all shadow-inner`}
+                      } text-white placeholder-neutral-500 text-base sm:text-lg focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all shadow-inner`}
                     />
                     {errors.name && (
-                      <span className="text-xs font-mono text-red-400 mt-1 block">
+                      <span className="text-xs sm:text-sm font-mono text-red-400 mt-1.5 block">
                         {errors.name}
                       </span>
                     )}
@@ -350,9 +350,9 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300 mb-2 font-semibold"
+                      className="flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-200 mb-2.5 font-bold"
                     >
-                      <Mail className="w-3.5 h-3.5 text-[#FF5A4F]" />
+                      <Mail className="w-4 h-4 text-[#FF5A4F]" />
                       <span>YOUR EMAIL *</span>
                     </label>
                     <input
@@ -364,12 +364,12 @@ export default function Contact() {
                         if (errors.email) setErrors({ ...errors, email: '' });
                       }}
                       placeholder="e.g. alex@example.com"
-                      className={`w-full px-4 py-3.5 rounded-xl bg-[#070707] border ${
+                      className={`w-full px-5 py-4 sm:py-4.5 rounded-xl bg-[#070707] border ${
                         errors.email ? 'border-red-500' : 'border-white/15'
-                      } text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all shadow-inner`}
+                      } text-white placeholder-neutral-500 text-base sm:text-lg focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all shadow-inner`}
                     />
                     {errors.email && (
-                      <span className="text-xs font-mono text-red-400 mt-1 block">
+                      <span className="text-xs sm:text-sm font-mono text-red-400 mt-1.5 block">
                         {errors.email}
                       </span>
                     )}
@@ -379,9 +379,9 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300 mb-2 font-semibold"
+                      className="flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-200 mb-2.5 font-bold"
                     >
-                      <MessageSquare className="w-3.5 h-3.5 text-[#FF5A4F]" />
+                      <MessageSquare className="w-4 h-4 text-[#FF5A4F]" />
                       <span>YOUR MESSAGE *</span>
                     </label>
                     <textarea
@@ -393,12 +393,12 @@ export default function Contact() {
                         if (errors.message) setErrors({ ...errors, message: '' });
                       }}
                       placeholder="Tell me about your project, vision, ideas, or questions..."
-                      className={`w-full px-4 py-3.5 rounded-xl bg-[#070707] border ${
+                      className={`w-full px-5 py-4 sm:py-4.5 rounded-xl bg-[#070707] border ${
                         errors.message ? 'border-red-500' : 'border-white/15'
-                      } text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all resize-none shadow-inner`}
+                      } text-white placeholder-neutral-500 text-base sm:text-lg focus:outline-none focus:border-[#FF5A4F] focus:ring-1 focus:ring-[#FF5A4F] transition-all resize-none shadow-inner`}
                     />
                     {errors.message && (
-                      <span className="text-xs font-mono text-red-400 mt-1 block">
+                      <span className="text-xs sm:text-sm font-mono text-red-400 mt-1.5 block">
                         {errors.message}
                       </span>
                     )}
@@ -408,10 +408,10 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-white via-neutral-100 to-[#FF5A4F]/20 hover:from-[#FF5A4F] hover:via-[#FF7A00] hover:to-[#FF5A4F] text-[#070707] hover:text-white font-mono font-black text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A4F] disabled:opacity-50 cursor-pointer shadow-lg hover:shadow-[0_0_35px_rgba(255,90,79,0.5)] transform hover:-translate-y-0.5"
+                    className="w-full py-4 sm:py-5 px-6 sm:px-8 rounded-xl bg-gradient-to-r from-white via-neutral-100 to-[#FF5A4F]/20 hover:from-[#FF5A4F] hover:via-[#FF7A00] hover:to-[#FF5A4F] text-[#070707] hover:text-white font-mono font-black text-sm sm:text-base uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A4F] disabled:opacity-50 cursor-pointer shadow-lg hover:shadow-[0_0_35px_rgba(255,90,79,0.5)] transform hover:-translate-y-0.5"
                   >
                     <span>{isSubmitting ? 'TRANSMITTING MESSAGE...' : 'SEND MESSAGE'}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-5 h-5" />
                   </button>
                 </form>
               )}

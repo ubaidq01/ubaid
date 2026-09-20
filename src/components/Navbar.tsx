@@ -47,8 +47,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#070707]/90 backdrop-blur-md border-b border-white/[0.08] py-3 sm:py-4'
-            : 'bg-transparent py-4 sm:py-6'
+            ? 'bg-[#070707]/90 backdrop-blur-md border-b border-white/[0.08] py-4 sm:py-5'
+            : 'bg-transparent py-5 sm:py-8'
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
@@ -58,17 +58,17 @@ export default function Navbar() {
             className="group flex items-center gap-3.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF5A4F]"
             aria-label="Ubaid Quazi - Home"
           >
-            <div className="flex items-center gap-2">
-              <span className="text-2xl sm:text-3xl font-black tracking-tighter text-white transition-colors group-hover:text-[#FF5A4F]">
+            <div className="flex items-center gap-2.5">
+              <span className="text-3xl sm:text-4xl font-black tracking-tighter text-white transition-colors group-hover:text-[#FF5A4F]">
                 UQ<span className="text-[#FF5A4F]">.</span>
               </span>
-              <span className="hidden sm:inline-block text-base sm:text-lg font-bold tracking-tight text-neutral-200 group-hover:text-white transition-colors">
+              <span className="hidden sm:inline-block text-lg sm:text-xl font-bold tracking-tight text-neutral-200 group-hover:text-white transition-colors">
                 Ubaid Quazi
               </span>
             </div>
 
-            <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 bg-white/[0.04] text-[11px] font-mono tracking-widest text-neutral-300 uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F] animate-pulse" />
+            <span className="hidden md:inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/15 bg-white/[0.05] text-xs font-mono font-medium tracking-widest text-neutral-200 uppercase">
+              <span className="h-2 w-2 rounded-full bg-[#FF5A4F] animate-pulse" />
               <span>CS (Data Science) &amp; AI</span>
             </span>
           </Link>
@@ -79,7 +79,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative text-sm sm:text-base font-semibold tracking-wider uppercase text-neutral-300 hover:text-white transition-colors duration-200 group focus:outline-none"
+                className="relative text-sm sm:text-base font-bold tracking-wider uppercase text-neutral-200 hover:text-white transition-colors duration-200 group focus:outline-none"
               >
                 <span>{link.label}</span>
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#FF5A4F] transition-all duration-300 group-hover:w-full" />
@@ -87,14 +87,14 @@ export default function Navbar() {
             ))}
 
             {/* Subtle vertical separator */}
-            <div className="h-4 w-px bg-white/20" />
+            <div className="h-5 w-px bg-white/20" />
 
             {/* GitHub icon link */}
             <a
               href={PERSONAL_INFO.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-400 hover:text-white transition-colors p-1 hover:scale-110"
+              className="text-neutral-300 hover:text-white transition-colors p-1.5 hover:scale-110"
               aria-label="GitHub Profile"
             >
               <GithubIcon className="w-5 h-5" />
@@ -103,10 +103,10 @@ export default function Navbar() {
             {/* Contact CTA Button (Larger & More Prominent) */}
             <Link
               href="#contact"
-              className="text-xs sm:text-sm font-mono font-bold tracking-wider uppercase px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] text-neutral-200 hover:text-[#070707] hover:bg-white hover:border-white transition-all duration-300 flex items-center gap-2 shadow-sm"
+              className="text-xs sm:text-sm font-mono font-bold tracking-wider uppercase px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.06] text-neutral-100 hover:text-[#070707] hover:bg-white hover:border-white transition-all duration-300 flex items-center gap-2 shadow-sm"
             >
               <span>Get In Touch</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#FF5A4F] group-hover:text-black" />
+              <ArrowUpRight className="w-4 h-4 text-[#FF5A4F] group-hover:text-black" />
             </Link>
           </nav>
 

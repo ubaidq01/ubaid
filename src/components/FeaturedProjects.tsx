@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldAlert, Cpu, Trophy, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Cpu, Trophy, CheckCircle2, ExternalLink } from 'lucide-react';
 import { GithubIcon } from '@/components/SocialIcons';
 import { FEATURED_PROJECTS } from '@/data/portfolioData';
 import { Project } from '@/types';
@@ -75,8 +75,9 @@ export default function FeaturedProjects() {
           {/* Bottom Panel Bar */}
           <div className="relative z-10 flex items-center justify-between text-xs font-mono text-neutral-500 border-t border-white/[0.06] pt-4">
             <span>SYS: PROD_v26.4</span>
-            <span className="text-[#FF5A4F] uppercase tracking-widest font-semibold">
-              EXPLORE CASE STUDY ↗
+            <span className="text-[#FF5A4F] group-hover:text-white uppercase tracking-widest font-semibold flex items-center gap-1.5 transition-colors">
+              <span>LAUNCH LIVE APP</span>
+              <ExternalLink className="w-3.5 h-3.5" />
             </span>
           </div>
         </div>
@@ -257,7 +258,13 @@ export default function FeaturedProjects() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 data-cursor="project"
-                onClick={() => setSelectedProject(project)}
+                onClick={() => {
+                  if (project.liveUrl) {
+                    window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                  } else {
+                    setSelectedProject(project);
+                  }
+                }}
                 className="group relative cursor-pointer border-t border-white/[0.08] pt-12 sm:pt-16"
               >
                 {/* Panel Layout: Two-column Editorial Split */}
@@ -296,17 +303,30 @@ export default function FeaturedProjects() {
                       ))}
                     </div>
 
-                    {/* Interactive Action Link */}
-                    <div className="pt-4 flex items-center gap-6">
+                    {/* Interactive Action Links */}
+                    <div className="pt-4 flex flex-wrap items-center gap-4 sm:gap-6">
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF5A4F] text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(255,90,79,0.3)]"
+                        >
+                          <span>LAUNCH LIVE APP</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      ) : null}
+
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedProject(project);
                         }}
-                        className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-white group-hover:text-[#FF5A4F] transition-colors focus:outline-none"
+                        className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 hover:text-[#FF5A4F] transition-colors focus:outline-none"
                       >
-                        <span>VIEW PROJECT</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        <span>CASE STUDY</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                       </button>
 
                       {project.githubUrl && (

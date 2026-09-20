@@ -65,7 +65,7 @@ export const FEATURED_PROJECTS: Project[] = [
     challenges:
       'Ensuring low latency during peak registration deadlines, maintaining atomic transactions for team slots, and designing a bulletproof verification review queue for organizers.',
     githubUrl: 'https://github.com/ubaidq01/aitm-badminton-championship-2026',
-    liveUrl: 'https://aitm-badminton-2026.vercel.app',
+    liveUrl: 'https://aitm-badminton-championship-2026.vercel.app/',
     accentColor: '#00D9FF',
     stats: [
       { label: 'Role', value: 'Lead Full-Stack Developer' },

@@ -214,7 +214,7 @@ export default function FeaturedProjects() {
   return (
     <section
       id="projects"
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background Lighting */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full bg-[#FF5A4F]/5 blur-[160px] pointer-events-none -z-10" />
@@ -222,7 +222,7 @@ export default function FeaturedProjects() {
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-20 sm:mb-28 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
@@ -245,7 +245,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Large Horizontal Project Panels */}
-        <div className="space-y-24 sm:space-y-36">
+        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
           {FEATURED_PROJECTS.map((project, index) => {
             const projectNumber = `0${index + 1} / 03`;
 

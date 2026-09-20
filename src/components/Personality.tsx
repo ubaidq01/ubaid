@@ -14,10 +14,10 @@ export default function Personality() {
   ];
 
   return (
-    <section className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden">
+    <section className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Top small label */}
-        <div className="flex items-center gap-3 mb-12 sm:mb-16">
+        <div className="flex items-center gap-3 mb-6 sm:mb-10">
           <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-neutral-500">
             [ PERSPECTIVE &amp; FOCUS ]
           </span>
@@ -30,7 +30,7 @@ export default function Personality() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mb-20 sm:mb-28"
+          className="max-w-4xl mb-10 sm:mb-16"
         >
           <p className="text-2xl sm:text-4xl lg:text-5xl font-extralight tracking-tight text-neutral-200 leading-[1.25]">
             &ldquo;I like understanding how things work,{' '}

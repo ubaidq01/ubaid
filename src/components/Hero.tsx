@@ -59,7 +59,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-transparent pt-28 sm:pt-36 pb-8 sm:pb-12 px-6 sm:px-10 lg:px-16 select-none"
+      className="relative min-h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-transparent pt-20 sm:pt-24 lg:pt-28 pb-4 sm:pb-6 px-4 sm:px-8 lg:px-12 select-none"
     >
       {/* 1. Ambient Background Layer */}
       <motion.div
@@ -91,13 +91,13 @@ export default function Hero() {
       </motion.div>
 
       {/* 3. Hero Centerpiece: BIG NAME + Proportional Statement Below */}
-      <div className="w-full max-w-[1400px] mx-auto my-auto py-8 sm:py-12">
+      <div className="w-full max-w-[1400px] mx-auto my-auto py-3 sm:py-6">
         <motion.div
           style={{ y: typographyY, scale: typographyScale, opacity: typographyOpacity }}
           className="flex flex-col"
         >
           {/* BIG NAME HEADLINE: UBAID QUAZI (Massive Scale & Animated) */}
-          <div className="mb-8 sm:mb-12">
+          <div className="mb-4 sm:mb-6 lg:mb-8">
             {/* Line 1: UBAID */}
             <motion.div
               variants={nameContainerVariants}
@@ -124,7 +124,7 @@ export default function Hero() {
               variants={nameContainerVariants}
               initial="hidden"
               animate="visible"
-              className="overflow-hidden sm:pl-20 md:pl-36 lg:pl-56 -mt-2 sm:-mt-5"
+              className="overflow-hidden pl-2 sm:pl-12 md:pl-24 lg:pl-36 -mt-1 sm:-mt-3"
             >
               <div className="hero-name uppercase flex items-baseline">
                 {'QUAZI'.split('').map((char, index) => {
@@ -157,11 +157,11 @@ export default function Hero() {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="pt-6 sm:pt-8 border-t border-white/[0.08] max-w-4xl"
+            className="pt-3 sm:pt-5 border-t border-white/[0.08] max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm mb-2 sm:mb-3">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
-              <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-200">
+              <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-neutral-200">
                 CS &ndash; DATA SCIENCE ENGINEERING STUDENT &bull; FULL-STACK &amp; AI
               </span>
             </div>
@@ -176,7 +176,7 @@ export default function Hero() {
             </h2>
 
             {/* Supporting description */}
-            <p className="text-base sm:text-lg font-light text-neutral-400 mt-4 max-w-2xl leading-relaxed">
+            <p className="text-sm sm:text-base font-light text-neutral-400 mt-2 sm:mt-3 max-w-2xl leading-relaxed">
               Computer Science &ndash; Data Science Engineering student building production web applications and exploring the intersection of AI, computer vision, and the modern web.
             </p>
           </motion.div>

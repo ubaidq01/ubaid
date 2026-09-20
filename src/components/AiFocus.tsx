@@ -25,14 +25,14 @@ export default function AiFocus() {
   return (
     <section
       id="ai-focus"
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Ambient Cool & Warm Radiance */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-r from-[#8B7CFF]/10 via-transparent to-[#FF5A4F]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Top small label */}
-        <div className="flex items-center gap-3 mb-10 sm:mb-16">
+        <div className="flex items-center gap-3 mb-6 sm:mb-10">
           <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#8B7CFF]">
             [ 04 // CURRENTLY EXPLORING ]
           </span>
@@ -40,7 +40,7 @@ export default function AiFocus() {
         </div>
 
         {/* Huge Headline: AI × WEB */}
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-8 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full min-h-[85vh] flex flex-col justify-center py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] overflow-hidden border-t border-white/[0.06]"
+      className="relative w-full min-h-[75vh] flex flex-col justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] overflow-hidden border-t border-white/[0.06]"
     >
       {/* Subtle Ambient Radial Glow */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-[#8B7CFF]/5 blur-[140px] pointer-events-none -z-10" />
@@ -19,7 +19,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-10 sm:mb-16"
+          className="flex items-center gap-3 mb-6 sm:mb-10"
         >
           <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
             [ 01 // ABOUT ]
@@ -33,7 +33,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mb-12 sm:mb-20 max-w-5xl"
+          className="mb-8 sm:mb-14 max-w-5xl"
         >
           <h2 className="editorial-statement font-normal text-white/95 uppercase leading-[0.96]">
             I BUILD SOFTWARE <br />

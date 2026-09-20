@@ -12,8 +12,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] py-14 sm:py-20 px-6 sm:px-10 lg:px-16">
-      <div className="w-full max-w-[1400px] mx-auto space-y-12">
+    <footer className="w-full bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] py-10 sm:py-14 px-4 sm:px-8 lg:px-12">
+      <div className="w-full max-w-[1400px] mx-auto space-y-8">
         {/* Main 3-column studio row */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Left: UQ. */}

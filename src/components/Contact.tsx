@@ -86,7 +86,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen flex flex-col justify-center py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle Warm Accent Radiance */}
       <div className="absolute top-1/3 right-1/4 w-[650px] h-[650px] rounded-full bg-[#FF5A4F]/10 blur-[170px] pointer-events-none -z-10" />
@@ -94,7 +94,7 @@ export default function Contact() {
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Top small label */}
-        <div className="flex items-center gap-3 mb-10 sm:mb-16">
+        <div className="flex items-center gap-3 mb-6 sm:mb-10">
           <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">
             [ 06 // GET IN TOUCH ]
           </span>
@@ -102,7 +102,7 @@ export default function Contact() {
         </div>
 
         {/* Huge Editorial Heading */}
-        <div className="mb-16 sm:mb-24 max-w-5xl">
+        <div className="mb-10 sm:mb-16 max-w-5xl">
           <h2 className="editorial-statement font-extrabold uppercase tracking-tight text-white">
             {headingWords.map((word, index) => (
               <motion.span

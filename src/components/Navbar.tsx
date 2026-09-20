@@ -47,11 +47,11 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#070707]/90 backdrop-blur-md border-b border-white/[0.08] py-4 sm:py-5'
-            : 'bg-transparent py-6 sm:py-8'
+            ? 'bg-[#070707]/90 backdrop-blur-md border-b border-white/[0.08] py-3 sm:py-4'
+            : 'bg-transparent py-4 sm:py-6'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
           {/* Top Left: Bigger Brand (UBAID QUAZI / UQ.) */}
           <Link
             href="#hero"

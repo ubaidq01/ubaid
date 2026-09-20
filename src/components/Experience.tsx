@@ -50,14 +50,14 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#070707] text-[#F5F5F5] border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle Ambient Radial Glow */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] rounded-full bg-[#FF5A4F]/5 blur-[150px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 sm:mb-24 gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-16 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#FF5A4F]">

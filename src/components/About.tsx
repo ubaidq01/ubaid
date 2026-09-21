@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -43,33 +44,66 @@ export default function About() {
           </h2>
         </motion.div>
 
-        {/* Descriptive Editorial Paragraph & Details in 2-column typographic layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 pt-8 border-t border-white/[0.06]">
-          {/* Left Sub-heading / Concept */}
+        {/* Descriptive Editorial Paragraph & Details in 2-column typographic layout with Profile Portrait */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pt-8 border-t border-white/[0.06] items-center">
+          {/* Left Column: High-Resolution Profile Portrait */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95, y: 25 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-4"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="lg:col-span-5 flex flex-col items-center lg:items-start"
           >
-            <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-3 font-semibold">
-              DISCIPLINE &amp; PHILOSOPHY
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-light text-neutral-100 tracking-tight leading-snug">
-              Engineering with mathematical depth, computational rigor, and creative discipline.
-            </h3>
+            <div className="relative w-full max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-b from-white/[0.06] via-[#101015] to-[#070707] border border-white/15 p-2 shadow-2xl group hover:border-[#FF5A4F]/40 transition-all duration-500">
+              {/* Subtle volcanic ambient glow behind photo */}
+              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 bg-gradient-to-tr from-[#FF5A4F]/25 via-[#FF7A00]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-grid-faint opacity-20 pointer-events-none" />
+
+              {/* Portrait Image */}
+              <div className="relative w-full h-full rounded-xl overflow-hidden flex items-end justify-center bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                <Image
+                  src="/ubaid-portrait.webp"
+                  alt="Ubaid Quazi - CS Student & Full-Stack Developer"
+                  width={768}
+                  height={1024}
+                  priority
+                  className="w-full h-full object-contain object-bottom filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.8)] transition-transform duration-700 group-hover:scale-105"
+                />
+
+                {/* Subtle Editorial Overlay Badge at bottom of photo */}
+                <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                  <div>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-white block">
+                      UBAID QUAZI
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400">
+                      CS (Data Science) &bull; Full-Stack &amp; AI
+                    </span>
+                  </div>
+                  <span className="h-2 w-2 rounded-full bg-[#FF5A4F] animate-pulse" />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Right Descriptive Text */}
+          {/* Right Column: Discipline, Philosophy & Biography */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="md:col-span-8 space-y-6"
+            className="lg:col-span-7 space-y-6"
           >
-            <p className="text-2xl sm:text-3xl font-light text-neutral-200 leading-relaxed">
+            <div>
+              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-2 font-semibold">
+                DISCIPLINE &amp; PHILOSOPHY
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-light text-neutral-100 tracking-tight leading-snug">
+                Engineering with mathematical depth, computational rigor, and creative discipline.
+              </h3>
+            </div>
+
+            <p className="text-xl sm:text-2xl font-light text-neutral-200 leading-relaxed">
               I&apos;m <strong className="text-white font-semibold">Ubaid Quazi</strong>, a{' '}
               <span className="text-white font-bold underline decoration-[#FF5A4F] decoration-2 underline-offset-4">
                 Computer Science &ndash; Data Science Engineering student

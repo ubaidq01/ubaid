@@ -124,8 +124,8 @@ body {
 
 /* Typography Scale - Bold, prominent & high visibility */
 .hero-name {
-  font-size: clamp(4.5rem, 14vw, 12rem);
-  line-height: 0.88;
+  font-size: clamp(3.75rem, 9.5vw, 9.5rem);
+  line-height: 0.9;
   letter-spacing: -0.04em;
 }
 

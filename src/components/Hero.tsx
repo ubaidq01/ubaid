@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
@@ -90,74 +91,99 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* 3. Hero Centerpiece: BIG NAME + Proportional Statement Below */}
-      <div className="w-full max-w-[1400px] mx-auto my-auto py-6 sm:py-10">
+      {/* 3. Hero Centerpiece: BIG NAME + Profile Photo Beside Name + Statement Below */}
+      <div className="w-full max-w-[1400px] mx-auto my-auto py-4 sm:py-6 lg:py-8">
         <motion.div
           style={{ y: typographyY, scale: typographyScale, opacity: typographyOpacity }}
           className="flex flex-col"
         >
-          {/* BIG NAME HEADLINE: UBAID QUAZI (Massive Scale & Animated) */}
-          <div className="mb-6 sm:mb-10">
-            {/* Line 1: UBAID */}
-            <motion.div
-              variants={nameContainerVariants}
-              initial="hidden"
-              animate="visible"
-              className="overflow-hidden"
-            >
-              <h1 className="hero-name font-black text-[#F5F5F5] tracking-tight uppercase">
-                {'UBAID'.split('').map((char, index) => (
-                  <motion.span
-                    key={`ubaid-${index}`}
-                    variants={letterVariants}
-                    whileHover={{ scale: 1.06, y: -4 }}
-                    className="inline-block transition-colors duration-300 hover:text-[#FF5A4F] drop-shadow-[0_0_25px_rgba(255,90,79,0.25)]"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </h1>
-            </motion.div>
-
-            {/* Line 2: QUAZI (Indented / Luminous Lava Glow & Animated) */}
-            <motion.div
-              variants={nameContainerVariants}
-              initial="hidden"
-              animate="visible"
-              className="overflow-hidden pl-4 sm:pl-16 md:pl-28 lg:pl-44 -mt-2 sm:-mt-4"
-            >
-              <div className="hero-name uppercase flex items-baseline">
-                {'QUAZI'.split('').map((char, index) => {
-                  const isHighlighted = index % 2 === 1;
-                  return (
+          {/* Main Top Row: Name Headline (Left) + Profile Photo Beside Name (Right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-6 sm:mb-8">
+            {/* Left: Animated Name Headline */}
+            <div className="lg:col-span-8 flex flex-col justify-center">
+              {/* Line 1: UBAID */}
+              <motion.div
+                variants={nameContainerVariants}
+                initial="hidden"
+                animate="visible"
+                className="overflow-hidden"
+              >
+                <h1 className="hero-name font-black text-[#F5F5F5] tracking-tight uppercase">
+                  {'UBAID'.split('').map((char, index) => (
                     <motion.span
-                      key={`quazi-${index}`}
+                      key={`ubaid-${index}`}
                       variants={letterVariants}
                       whileHover={{ scale: 1.06, y: -4 }}
-                      className={`inline-block ${
-                        isHighlighted ? 'text-lava-glow font-light' : 'font-extrabold text-white'
-                      } transition-all duration-300 hover:text-[#FF5A4F] hover:drop-shadow-[0_0_35px_#FF5A4F]`}
+                      className="inline-block transition-colors duration-300 hover:text-[#FF5A4F] drop-shadow-[0_0_25px_rgba(255,90,79,0.25)]"
                     >
                       {char}
                     </motion.span>
-                  );
-                })}
-                <motion.span
-                  variants={letterVariants}
-                  className="text-[#FF5A4F] inline-block font-mono ml-1 sm:ml-2 animate-pulse"
-                >
-                  .
-                </motion.span>
+                  ))}
+                </h1>
+              </motion.div>
+
+              {/* Line 2: QUAZI (Indented / Luminous Lava Glow & Animated) */}
+              <motion.div
+                variants={nameContainerVariants}
+                initial="hidden"
+                animate="visible"
+                className="overflow-hidden pl-3 sm:pl-8 md:pl-12 lg:pl-16 -mt-2 sm:-mt-4"
+              >
+                <div className="hero-name uppercase flex items-baseline">
+                  {'QUAZI'.split('').map((char, index) => {
+                    const isHighlighted = index % 2 === 1;
+                    return (
+                      <motion.span
+                        key={`quazi-${index}`}
+                        variants={letterVariants}
+                        whileHover={{ scale: 1.06, y: -4 }}
+                        className={`inline-block ${
+                          isHighlighted ? 'text-lava-glow font-light' : 'font-extrabold text-white'
+                        } transition-all duration-300 hover:text-[#FF5A4F] hover:drop-shadow-[0_0_35px_#FF5A4F]`}
+                      >
+                        {char}
+                      </motion.span>
+                    );
+                  })}
+                  <motion.span
+                    variants={letterVariants}
+                    className="text-[#FF5A4F] inline-block font-mono ml-1 sm:ml-2 animate-pulse"
+                  >
+                    .
+                  </motion.span>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right: Transparent Profile Photo Beside Name (Frameless) */}
+            <motion.div
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              className="lg:col-span-4 flex justify-center lg:justify-end items-end relative"
+            >
+              {/* Subtle volcanic ambient glow behind photo */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-72 bg-gradient-to-tr from-[#FF5A4F]/20 via-[#FF7A00]/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
+
+              <div className="relative w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px] h-[340px] sm:h-[400px] lg:h-[450px] flex items-end justify-center">
+                <Image
+                  src="/ubaid-hero.webp"
+                  alt="Ubaid Quazi - Full-Stack Developer & CS Student"
+                  width={682}
+                  height={1024}
+                  priority
+                  className="w-full h-full object-contain object-bottom filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] drop-shadow-[0_0_25px_rgba(255,90,79,0.15)] transition-transform duration-500 hover:scale-105 select-none pointer-events-auto"
+                />
               </div>
             </motion.div>
           </div>
 
-          {/* Title & Statement BELOW the name (Proportionally Smaller as requested) */}
+          {/* Title & Statement BELOW the name and portrait */}
           <motion.div
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            className="pt-5 sm:pt-8 border-t border-white/[0.08] max-w-5xl"
+            className="pt-5 sm:pt-7 border-t border-white/[0.08] max-w-5xl"
           >
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.05] backdrop-blur-sm mb-4">
               <span className="h-2 w-2 rounded-full bg-[#FF5A4F]" />

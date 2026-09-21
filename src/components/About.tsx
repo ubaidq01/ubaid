@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -44,45 +43,32 @@ export default function About() {
           </h2>
         </motion.div>
 
-        {/* Descriptive Editorial Paragraph & Details in 2-column typographic layout with Profile Portrait */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pt-8 border-t border-white/[0.06] items-center">
-          {/* Left Column: High-Resolution Profile Portrait (Frameless with Natural Background) */}
+        {/* Descriptive Editorial Paragraph & Details in 2-column typographic layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 pt-8 border-t border-white/[0.06]">
+          {/* Left Sub-heading / Concept */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 20 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-5 flex flex-col items-center lg:items-start"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="md:col-span-4"
           >
-            <div className="relative w-full max-w-[400px] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
-              <Image
-                src="/ubaid-profile.webp"
-                alt="Ubaid Quazi - CS Student & Full-Stack Developer"
-                width={721}
-                height={1024}
-                priority
-                className="w-full h-auto object-cover rounded-2xl"
-              />
-            </div>
+            <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-3 font-semibold">
+              DISCIPLINE &amp; PHILOSOPHY
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-light text-neutral-100 tracking-tight leading-snug">
+              Engineering with mathematical depth, computational rigor, and creative discipline.
+            </h3>
           </motion.div>
 
-          {/* Right Column: Discipline, Philosophy & Biography */}
+          {/* Right Descriptive Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="lg:col-span-7 space-y-6"
+            className="md:col-span-8 space-y-6"
           >
-            <div>
-              <span className="text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-[#FF5A4F] block mb-2 font-semibold">
-                DISCIPLINE &amp; PHILOSOPHY
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-light text-neutral-100 tracking-tight leading-snug">
-                Engineering with mathematical depth, computational rigor, and creative discipline.
-              </h3>
-            </div>
-
             <p className="text-xl sm:text-2xl font-light text-neutral-200 leading-relaxed">
               I&apos;m <strong className="text-white font-semibold">Ubaid Quazi</strong>, a{' '}
               <span className="text-white font-bold underline decoration-[#FF5A4F] decoration-2 underline-offset-4">

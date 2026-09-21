@@ -28,6 +28,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const validate = () => {
@@ -44,35 +45,63 @@ export default function Contact() {
 
     if (!formData.message.trim()) {
       newErrors.message = 'Please provide a message.';
-    } else if (formData.message.trim().length < 8) {
-      newErrors.message = 'Message must be at least 8 characters.';
+    } else if (formData.message.trim().length < 5) {
+      newErrors.message = 'Message must be at least 5 characters.';
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setSubmitError('');
 
-    // Simulate sending message with celebratory confetti
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-
-      confetti({
-        particleCount: 60,
-        spread: 70,
-        origin: { y: 0.8 },
-        colors: ['#FF5A4F', '#FF8800', '#8B7CFF', '#F5F5F5'],
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ubaidquazi8@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          _subject: `New Portfolio Message from ${formData.name.trim()}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
       });
 
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 6000);
-    }, 700);
+      const data = await response.json();
+
+      // Formsubmit returns 200 or message indicating success / activation
+      if (response.ok || data.success === 'true' || data.success === true || (data.message && data.message.includes('Activation'))) {
+        setIsSubmitted(true);
+
+        confetti({
+          particleCount: 70,
+          spread: 75,
+          origin: { y: 0.8 },
+          colors: ['#FF5A4F', '#FF8800', '#8B7CFF', '#F5F5F5'],
+        });
+
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(data.message || 'Transmission failed.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setSubmitError(
+        'Could not send automatically right now. You can click below to email directly via your mail client.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCopyEmail = () => {
@@ -303,7 +332,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="py-16 text-center space-y-4 relative z-10"
+                  className="py-16 text-center space-y-5 relative z-10"
                 >
                   <div className="w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 mx-auto flex items-center justify-center shadow-[0_0_25px_rgba(16,185,129,0.3)]">
                     <Check className="w-8 h-8" />
@@ -311,9 +340,19 @@ export default function Contact() {
                   <h3 className="text-2xl sm:text-4xl font-black uppercase tracking-tight text-white">
                     MESSAGE TRANSMITTED
                   </h3>
-                  <p className="text-base font-light text-neutral-300 max-w-sm mx-auto">
-                    Thank you for getting in touch, <span className="text-white font-medium">Ubaid</span> has received your note and will get back to you promptly.
+                  <p className="text-base font-light text-neutral-300 max-w-md mx-auto leading-relaxed">
+                    Thank you for getting in touch! Your message has been sent directly to{' '}
+                    <span className="text-[#FF5A4F] font-mono font-semibold">ubaidquazi8@gmail.com</span>. Ubaid will get back to you promptly.
                   </p>
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsSubmitted(false)}
+                      className="px-6 py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-white/10 text-xs sm:text-sm font-mono text-neutral-200 hover:text-white transition-colors uppercase tracking-wider cursor-pointer"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
@@ -403,6 +442,21 @@ export default function Contact() {
                       </span>
                     )}
                   </div>
+
+                  {/* Error Notification with Fallback */}
+                  {submitError && (
+                    <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs sm:text-sm font-mono space-y-2">
+                      <p>{submitError}</p>
+                      <a
+                        href={`mailto:ubaidquazi8@gmail.com?subject=Portfolio Inquiry from ${encodeURIComponent(
+                          formData.name || 'Visitor'
+                        )}&body=${encodeURIComponent(formData.message || '')}`}
+                        className="inline-flex items-center gap-1.5 text-white underline underline-offset-4 hover:text-[#FF5A4F] font-semibold"
+                      >
+                        <span>Open Mail Client Directly ↗</span>
+                      </a>
+                    </div>
+                  )}
 
                   {/* Submit Button (Radiant Volcanic Accent) */}
                   <button

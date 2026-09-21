@@ -2,7 +2,6 @@
 
 import React from 'react';
 import CinematicIntro from '@/components/CinematicIntro';
-import CustomCursor from '@/components/CustomCursor';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -21,10 +20,7 @@ export default function Home() {
       {/* 0. Dramatic Opening Sequence on Load/Refresh */}
       <CinematicIntro />
 
-      {/* 1. Desktop Interactive Custom Cursor */}
-      <CustomCursor />
-
-      {/* 2. Scroll Depth Reading Bar */}
+      {/* 1. Scroll Depth Reading Bar */}
       <ScrollProgress />
 
       {/* 3. Floating Minimal Navigation */}

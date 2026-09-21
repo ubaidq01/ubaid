@@ -74,69 +74,69 @@ export const FEATURED_PROJECTS: Project[] = [
     ],
   },
   {
-    id: 'browser-vision-agent',
-    title: 'On-Device Browser Vision Agent',
-    subtitle: 'Client-Side Real-Time Visual Perception Engine',
-    tagline: 'Zero-latency computer vision agent running lightweight neural networks locally in web browsers using WebGPU and ONNX.',
+    id: 'fixit',
+    title: 'FixIt',
+    subtitle: 'Campus & Community Issue Reporting and Resolution Platform',
+    tagline: 'A centralized platform streamlining civic complaint reporting, automated priority triage, and administrative maintenance dispatch.',
     description:
-      'An AI/browser vision project focused on lightweight visual perception directly on the device using technologies such as ONNX and WebGPU.',
-    category: 'Edge AI & Computer Vision',
-    technologies: ['AI / ML', 'Computer Vision', 'ONNX Runtime Web', 'WebGPU', 'JavaScript', 'TypeScript'],
+      'A full-stack issue tracking and maintenance management platform engineered to report, categorize, and track campus infrastructure issues from submission to resolution.',
+    category: 'Full-Stack Web & Systems',
+    technologies: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST API'],
     highlights: [
-      'Zero server dependency with 100% local client-side model execution',
-      'Hardware-accelerated tensor operations via WebGPU & WebAssembly kernels',
-      'Real-time video feed analysis achieving 30+ FPS on consumer laptops',
-      'Privacy-first design: no images or camera feeds ever leave the user device',
-      'Dynamic model quantization for seamless cross-platform performance'
+      'Multi-category issue reporting with geolocation tagging and photo evidence uploads',
+      'Automated priority classification triage based on infrastructure severity and urgency',
+      'Administrative dispatch workflow assigning tasks to specialized maintenance units',
+      'Real-time ticket lifecycle tracking (Submitted \u2192 Triaged \u2192 In Progress \u2192 Resolved)',
+      'Resolution verification with before/after status updates and closure feedback audit'
     ],
     overview:
-      'A pioneering computer vision solution that brings intelligent perception directly into client browsers. By utilizing ONNX Runtime Web and modern WebGPU compute shaders, the application analyzes visual input locally in real time without incurring server GPU hosting bills or transmitting private video streams.',
+      'FixIt is a comprehensive issue management system designed to eliminate unorganized campus grievances and delayed repairs. Traditional reporting methods relied on scattered manual complaint registers or lost emails, resulting in prolonged downtime for campus utilities and broken infrastructure. FixIt streamlines the entire lifecycle into an accountable, transparent, digital resolution pipeline.',
     problem:
-      'Traditional cloud vision architectures require continuous video frame streaming to remote servers. This introduces network lag (150-500ms), prohibitive cloud compute expenses, and severe user privacy vulnerabilities.',
+      'Campus infrastructure issues (damaged lab equipment, electrical faults, plumbing leaks, and IT outages) were documented in disconnected manual logs. Administration lacked visibility into recurring failure points, response times were slow, and students had zero visibility into resolution progress.',
     solution:
-      'Constructed a client-side execution pipeline utilizing quantized neural vision models deployed through ONNX Runtime Web with WebGPU backends. Shaders process raw video frame textures directly in the browser graphics pipeline.',
+      'Architected a centralized reporting portal featuring authenticated user submissions with image attachments and severity tagging. Built an administrative command dashboard featuring real-time ticket triage, automated assignment routing to maintenance supervisors, and an audit trail ensuring timely issue resolution.',
     challenges:
-      'Managing browser memory limitations, balancing model size versus detection precision, and handling cross-browser variations in WebGPU support gracefully.',
-    githubUrl: 'https://github.com/ubaidq01/on-device-browser-vision-agent',
-    liveUrl: 'https://browser-vision-agent.vercel.app',
-    accentColor: '#38BDF8',
+      'Preventing duplicate reports for high-visibility public issues, designing an efficient state machine for ticket transitions, and maintaining responsive performance across mobile devices for field technicians.',
+    githubUrl: '',
+    liveUrl: '',
+    accentColor: '#FF7A00',
     stats: [
-      { label: 'Inference', value: 'Local WebGPU' },
-      { label: 'Latency', value: '< 20ms' },
-      { label: 'Privacy', value: '100% Client-Side' },
+      { label: 'Architecture', value: 'Full-Stack Issue Tracking' },
+      { label: 'Triage System', value: 'Priority-Based Queuing' },
+      { label: 'Verification', value: 'Evidence Photo Audit' },
     ],
   },
   {
-    id: 'fake-qr-code-detection',
-    title: 'Fake QR Code Detection',
-    subtitle: 'AI-Based Physical & Digital Quishing Countermeasure',
-    tagline: 'Intelligent security system analyzing visual print anomalies, physical sticker tampering, and malicious redirect vectors.',
+    id: 'blackout',
+    title: 'Blackout',
+    subtitle: '2D Multiplayer Social Deduction & Meltdown Survival Game',
+    tagline: '8-player top-down multiplayer game set in the compromised Asterion Research Facility. Built in Godot Engine 4 with GDScript.',
     description:
-      'An AI-based system designed to identify potentially fake or suspicious QR codes using machine learning and computer vision techniques.',
-    category: 'AI & Cybersecurity',
-    technologies: ['Python', 'Machine Learning', 'Computer Vision', 'OpenCV', 'Gradient Boosting', 'Neural Networks'],
+      'A 2D top-down multiplayer social deduction game where 7 crew members repair facility systems and investigate clues while 1 hidden impostor triggers blackouts and sabotages the core.',
+    category: 'Multiplayer Game Development',
+    technologies: ['Godot Engine 4', 'GDScript', 'Multiplayer Networking', '2D Shaders', 'Game Design'],
     highlights: [
-      'Dual-layer inspection: physical image tampering detection + URL heuristic risk analysis',
-      'Computer vision edge and resolution disparity algorithms to uncover physical sticker overlays',
-      'Machine learning model ensemble (Gradient Boosting & CNNs) classifying anomaly features',
-      'Real-time confidence scoring identifying deceptive and malicious QR payloads',
-      'OpenCV pipeline compensating for perspective distortion, specular highlights, and camera noise'
+      'Co-op multiplayer game being developed collaboratively with friends in Godot Engine 4',
+      'Member 4 Role: Client Interaction & Mini-Game Programmer (station inputs & task mechanics)',
+      'Dual-phase gameplay: normal operations, remote blackout power cuts, emergency meetings, and 5-minute meltdown climax',
+      'Pure social deduction mechanics based on physical clues, missing files, and broken relays',
+      'Active work-in-progress with dedicated modular architecture and multiplayer state synchronization'
     ],
     overview:
-      'A specialized security project tackling the surge in physical QR phishing attacks (quishing). The system blends computer vision forensics with predictive machine learning models to detect whether a QR code is counterfeit, pasted over a legitimate target, or pointing to a credential-harvesting trap.',
+      'Blackout is an ambitious 2D top-down multiplayer social deduction and survival game set in the compromised Asterion Research Facility. Built collaboratively with a team of friends using Godot Engine 4 and GDScript, 7 loyal crew members must complete daily maintenance tasks and solve distributed recovery systems, while 1 covert Impostor triggers facility-wide blackouts to steal classified research files and induce a core meltdown.',
     problem:
-      'Malicious actors frequently paste deceptive QR code stickers over genuine parking meters, restaurant menus, and payment displays. Normal scanners blindly decode the URL, exposing unsuspecting users to financial loss and phishing.',
+      'Many multiplayer party games suffer from repetitive mechanics or reliance on automated game-assisted lie detectors, missing the tension of true physical evidence investigation and high-stakes cooperative survival.',
     solution:
-      'Developed an end-to-end Python pipeline. OpenCV performs morphological edge detection and texture gradient checks around code borders to detect physical sticker overlays. The decoded content is concurrently assessed by a trained Gradient Boosting classifier to evaluate domain entropy and phishing signatures.',
+      'Collaboratively engineering a multi-phase game loop combining physical station interactions, dynamic darkness lighting shaders, interactive crew mini-games, and a tense 5-minute final Meltdown phase. As Member 4 on the development team, responsible for client-side interaction architecture, crew maintenance mini-games, and interactive station inputs.',
     challenges:
-      'Accurately distinguishing between legitimate wear-and-tear or environmental lighting anomalies and calculated physical sticker attacks without generating false positives.',
-    githubUrl: 'https://github.com/ubaidq01/fake-qr-code-detection',
+      'Ensuring smooth client-side input responsiveness, syncing interactive task state with the authoritative game server, and designing engaging mini-games that balance difficulty under time pressure.',
+    githubUrl: 'https://github.com/ABUBAK3R-K/Blackout',
     liveUrl: '',
-    accentColor: '#60A5FA',
+    accentColor: '#8B7CFF',
     stats: [
-      { label: 'Domain', value: 'Computer Vision & ML' },
-      { label: 'Target', value: 'Quishing Prevention' },
-      { label: 'Core Engine', value: 'OpenCV + Ensemble' },
+      { label: 'Role', value: 'Client Interaction & Mini-Games' },
+      { label: 'Engine', value: 'Godot 4 + GDScript' },
+      { label: 'Status', value: 'In Active Development' },
     ],
   },
 ];

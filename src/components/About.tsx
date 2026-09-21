@@ -77,9 +77,9 @@ export default function About() {
               and developer focused on full-stack web platforms, artificial intelligence, computer vision, and practical software products.
             </p>
             <p className="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-3xl">
-              Rather than assembling generic templates, I bridge statistical data science and algorithmic engineering with production web architectures —
+              Rather than assembling generic templates, I bridge statistical data science and algorithmic engineering with production software architectures —
               whether that means eliminating tournament coordination chaos with Next.js &amp; Supabase,
-              deploying zero-latency on-device vision models via WebGPU &amp; ONNX, or preventing physical quishing attacks with computer vision forensics.
+              streamlining campus maintenance dispatch pipelines with FixIt, or engineering multiplayer game mechanics and interactive client systems in Godot for Blackout.
             </p>
           </motion.div>
         </div>

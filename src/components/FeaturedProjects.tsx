@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldAlert, Cpu, Trophy, CheckCircle2, ExternalLink } from 'lucide-react';
+import { ArrowRight, Wrench, Gamepad2, Trophy, CheckCircle2, ExternalLink } from 'lucide-react';
 import { GithubIcon } from '@/components/SocialIcons';
 import { FEATURED_PROJECTS } from '@/data/portfolioData';
 import { Project } from '@/types';
@@ -84,128 +84,142 @@ export default function FeaturedProjects() {
       );
     }
 
-    if (project.id === 'browser-vision-agent') {
+    if (project.id === 'fixit') {
       return (
         <div className="relative w-full h-[340px] sm:h-[420px] rounded-2xl bg-[#0B0B0E] border border-white/[0.08] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group-hover:border-white/25 transition-all duration-500 shadow-2xl">
           {/* Subtle Ambient Radial Glow */}
-          <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#8B7CFF]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-gradient-to-tr from-[#FF7A00]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
           <div className="absolute inset-0 bg-grid-faint opacity-30 pointer-events-none" />
 
           {/* Top Panel Bar */}
           <div className="relative z-10 flex items-center justify-between border-b border-white/[0.06] pb-4">
             <div className="flex items-center gap-3">
               <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 text-white">
-                <Cpu className="w-4 h-4 text-[#8B7CFF]" />
+                <Wrench className="w-4 h-4 text-[#FF7A00]" />
               </div>
               <div>
                 <span className="text-xs font-mono text-white block uppercase tracking-wider">
-                  Client-Side Neural Inference
+                  Campus Issue &amp; Maintenance Engine
                 </span>
                 <span className="text-[10px] font-mono text-neutral-500">
-                  ONNX Runtime Web • WebGPU Shaders
+                  Next.js • Node.js • PostgreSQL • REST
                 </span>
               </div>
             </div>
             <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#8B7CFF] animate-ping" />
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-[10px] font-mono text-neutral-300 uppercase tracking-widest">
-                ZERO CLOUD LATENCY
+                TRIAGE QUEUE ACTIVE
               </span>
             </div>
           </div>
 
-          {/* Center Mockup HUD: Vision Shaders Matrix */}
-          <div className="relative z-10 p-5 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm space-y-3 my-auto">
-            <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-neutral-400">INFERENCE TELEMETRY:</span>
-              <span className="text-[#8B7CFF] font-semibold">18.4ms (WebGPU)</span>
+          {/* Center Mockup HUD */}
+          <div className="relative z-10 grid grid-cols-2 gap-3 my-auto">
+            <div className="p-4 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 block mb-1">
+                GRIEVANCE INGESTION
+              </span>
+              <div className="text-sm font-semibold text-white flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#FF7A00]" />
+                <span>Geo-Tagged Tickets</span>
+              </div>
+              <p className="text-[11px] text-neutral-400 mt-1">
+                Severity triage &amp; automated dispatch routing
+              </p>
             </div>
-            <div className="w-full bg-white/[0.06] h-1.5 rounded-full overflow-hidden">
-              <div className="bg-gradient-to-r from-[#8B7CFF] to-[#FF5A4F] h-full w-4/5 rounded-full" />
-            </div>
-            <div className="grid grid-cols-3 gap-2 pt-1 text-[11px] font-mono text-neutral-400">
-              <div className="p-2 rounded bg-white/[0.02] border border-white/[0.04] text-center">
-                <span className="block text-[9px] text-neutral-500">TENSOR</span>
-                <span className="text-white">FP16</span>
+
+            <div className="p-4 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 block mb-1">
+                RESOLUTION PIPELINE
+              </span>
+              <div className="text-sm font-semibold text-white flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Verified Audit Trail</span>
               </div>
-              <div className="p-2 rounded bg-white/[0.02] border border-white/[0.04] text-center">
-                <span className="block text-[9px] text-neutral-500">FPS</span>
-                <span className="text-white">34 FPS</span>
-              </div>
-              <div className="p-2 rounded bg-white/[0.02] border border-white/[0.04] text-center">
-                <span className="block text-[9px] text-neutral-500">PRIVACY</span>
-                <span className="text-emerald-400">100% LOCAL</span>
-              </div>
+              <p className="text-[11px] text-neutral-400 mt-1">
+                Submitted → Triaged → In Progress → Resolved
+              </p>
             </div>
           </div>
 
           {/* Bottom Panel Bar */}
           <div className="relative z-10 flex items-center justify-between text-xs font-mono text-neutral-500 border-t border-white/[0.06] pt-4">
-            <span>ENGINE: WEBGPU_ONNX</span>
-            <span className="text-[#8B7CFF] uppercase tracking-widest font-semibold">
-              EXPLORE CASE STUDY ↗
+            <span>PIPELINE: FIXIT_DISPATCH</span>
+            <span className="text-[#FF7A00] uppercase tracking-widest font-semibold flex items-center gap-1.5">
+              <span>EXPLORE CASE STUDY</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </div>
       );
     }
 
-    // Default / Project 03 (Fake QR Code Detection)
+    // Default / Project 03: Blackout (Multiplayer Social Deduction Game)
     return (
       <div className="relative w-full h-[340px] sm:h-[420px] rounded-2xl bg-[#0B0B0E] border border-white/[0.08] overflow-hidden p-6 sm:p-8 flex flex-col justify-between group-hover:border-white/25 transition-all duration-500 shadow-2xl">
         {/* Subtle Ambient Radial Glow */}
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-[#FF5A4F]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-[#8B7CFF]/15 to-transparent rounded-full blur-3xl pointer-events-none" />
         <div className="absolute inset-0 bg-grid-faint opacity-30 pointer-events-none" />
 
         {/* Top Panel Bar */}
         <div className="relative z-10 flex items-center justify-between border-b border-white/[0.06] pb-4">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-lg bg-white/[0.04] border border-white/10 text-white">
-              <ShieldAlert className="w-4 h-4 text-[#FF5A4F]" />
+              <Gamepad2 className="w-4 h-4 text-[#8B7CFF]" />
             </div>
             <div>
               <span className="text-xs font-mono text-white block uppercase tracking-wider">
-                Quishing Forensics System
+                Multiplayer Social Deduction Game
               </span>
               <span className="text-[10px] font-mono text-neutral-500">
-                OpenCV • Gradient Boosting • Python
+                Godot Engine 4 • GDScript • Networking
               </span>
             </div>
           </div>
           <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
-            <span className="text-[10px] font-mono text-neutral-300 uppercase tracking-widest">
-              TAMPER AUDIT ACTIVE
+            <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span className="text-[10px] font-mono text-amber-300 uppercase tracking-widest">
+              IN ACTIVE DEVELOPMENT
             </span>
           </div>
         </div>
 
-        {/* Center Mockup HUD: Forensic Matrix */}
-        <div className="relative z-10 p-5 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm space-y-3 my-auto">
-          <div className="flex items-center justify-between text-xs font-mono">
-            <span className="text-neutral-400">PHYSICAL TAMPER PROBABILITY:</span>
-            <span className="text-[#FF5A4F] font-semibold">97.8% (ANOMALY)</span>
-          </div>
-          <div className="w-full bg-white/[0.06] h-1.5 rounded-full overflow-hidden">
-            <div className="bg-[#FF5A4F] h-full w-[94%] rounded-full" />
-          </div>
-          <div className="grid grid-cols-2 gap-2 pt-1 text-[11px] font-mono text-neutral-400">
-            <div className="p-2 rounded bg-white/[0.02] border border-white/[0.04]">
-              <span className="text-[9px] text-neutral-500 block">EDGE DISPARITY</span>
-              <span className="text-white">Sticker Border Identified</span>
+        {/* Center Mockup HUD */}
+        <div className="relative z-10 grid grid-cols-2 gap-3 my-auto">
+          <div className="p-4 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 block mb-1">
+              ASTERION RESEARCH FACILITY
+            </span>
+            <div className="text-sm font-semibold text-white flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#8B7CFF]" />
+              <span>4-Phase Match Flow</span>
             </div>
-            <div className="p-2 rounded bg-white/[0.02] border border-white/[0.04]">
-              <span className="text-[9px] text-neutral-500 block">URL ENTROPY</span>
-              <span className="text-white">Deceptive Subdomain</span>
+            <p className="text-[11px] text-neutral-400 mt-1">
+              Normal Ops → Remote Blackout → Meetings → Meltdown
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-[#070707]/90 border border-white/[0.06] backdrop-blur-sm">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 block mb-1">
+              TEAM CO-OP ARCHITECTURE
+            </span>
+            <div className="text-sm font-semibold text-white flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-white" />
+              <span>Member 4 Programmer</span>
             </div>
+            <p className="text-[11px] text-neutral-400 mt-1">
+              Interactive station inputs &amp; mini-game mechanics
+            </p>
           </div>
         </div>
 
         {/* Bottom Panel Bar */}
         <div className="relative z-10 flex items-center justify-between text-xs font-mono text-neutral-500 border-t border-white/[0.06] pt-4">
-          <span>PIPELINE: OPENCV_ENSEMBLE</span>
-          <span className="text-[#FF5A4F] uppercase tracking-widest font-semibold">
-            EXPLORE CASE STUDY ↗
+          <span>ENGINE: GODOT_4_GDSCRIPT</span>
+          <span className="text-[#8B7CFF] uppercase tracking-widest font-semibold flex items-center gap-1.5">
+            <span>GITHUB REPO &amp; CASE STUDY</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </span>
         </div>
       </div>

@@ -25,6 +25,8 @@ export default function TechStack() {
   ];
 
   const secondaryTools = [
+    'GODOT ENGINE',
+    'GDSCRIPT',
     'JAVA',
     'C++',
     'EXPRESS',

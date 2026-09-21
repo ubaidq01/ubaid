@@ -23,19 +23,19 @@ export default function Experience() {
     },
     {
       period: '2025 — 2026',
-      category: 'AI / MACHINE LEARNING',
-      role: 'Exploring Intelligent Systems & Edge Vision',
+      category: 'CIVIC & CAMPUS SYSTEMS',
+      role: 'FixIt — Issue Reporting & Maintenance Platform',
       description:
-        'Engineered an experimental on-device browser vision agent executing lightweight quantized neural models locally using ONNX Runtime Web and hardware-accelerated WebGPU shaders without remote server latency.',
-      tags: ['ONNX Runtime Web', 'WebGPU', 'Computer Vision', 'Edge AI'],
+        'Architected FixIt, a centralized campus and civic issue tracking platform with geo-tagged ticket triage, automated priority routing for maintenance units, and photo verification audit workflows.',
+      tags: ['Next.js', 'Node.js', 'PostgreSQL', 'REST API', 'Tailwind CSS'],
     },
     {
-      period: '2024 — 2026',
-      category: 'PROJECT DEVELOPMENT',
-      role: 'Building Practical Software Products',
+      period: '2026 — PRESENT',
+      category: 'GAME DEVELOPMENT',
+      role: 'Blackout — Multiplayer Social Deduction Game',
       description:
-        'Engineered end-to-end solutions for concrete security and logistical challenges, including a dual-layer fake QR code (quishing) detection engine combining OpenCV edge forensics with Gradient Boosted classifiers.',
-      tags: ['Python', 'OpenCV', 'Gradient Boosting', 'Cybersecurity'],
+        'Co-developing an 8-player 2D top-down multiplayer game in Godot Engine 4 with friends. Leading client interaction architecture, station inputs, crew maintenance tasks, and sabotage mini-games.',
+      tags: ['Godot Engine 4', 'GDScript', 'Multiplayer Networking', '2D Shaders'],
     },
     {
       period: 'ONGOING',

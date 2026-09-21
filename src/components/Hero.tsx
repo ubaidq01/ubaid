@@ -97,10 +97,10 @@ export default function Hero() {
           style={{ y: typographyY, scale: typographyScale, opacity: typographyOpacity }}
           className="flex flex-col"
         >
-          {/* Main Top Row: Name Headline (Left) + Profile Photo Beside Name (Right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center mb-6 sm:mb-8">
+          {/* Main Top Row: Name Headline + Profile Photo Tightly Attached Beside Name */}
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-start gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8 w-fit">
             {/* Left: Animated Name Headline */}
-            <div className="lg:col-span-8 flex flex-col justify-center">
+            <div className="flex flex-col justify-center shrink-0">
               {/* Line 1: UBAID */}
               <motion.div
                 variants={nameContainerVariants}
@@ -155,17 +155,17 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            {/* Right: Transparent Profile Photo Beside Name (Frameless) */}
+            {/* Right: Transparent Profile Photo Tightly Attached Beside Name */}
             <motion.div
               variants={itemVariants}
               initial="hidden"
               animate="visible"
-              className="lg:col-span-4 flex justify-center lg:justify-end items-end relative"
+              className="relative shrink-0 flex items-end -ml-2 sm:-ml-4 lg:-ml-6 self-end"
             >
               {/* Subtle volcanic ambient glow behind photo */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-72 bg-gradient-to-tr from-[#FF5A4F]/20 via-[#FF7A00]/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-64 bg-gradient-to-tr from-[#FF5A4F]/25 via-[#FF7A00]/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
-              <div className="relative w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px] h-[340px] sm:h-[400px] lg:h-[450px] flex items-end justify-center">
+              <div className="relative w-[180px] sm:w-[230px] md:w-[260px] lg:w-[310px] xl:w-[340px] h-[280px] sm:h-[360px] md:h-[420px] lg:h-[480px] xl:h-[520px] flex items-end justify-center">
                 <Image
                   src="/ubaid-hero.webp"
                   alt="Ubaid Quazi - Full-Stack Developer & CS Student"

@@ -71,8 +71,8 @@ export default function About() {
           >
             <p className="text-xl sm:text-2xl font-light text-neutral-200 leading-relaxed">
               I&apos;m <strong className="text-white font-semibold">Ubaid Quazi</strong>, a{' '}
-              <span className="text-white font-bold underline decoration-[#FF5A4F] decoration-2 underline-offset-4">
-                Computer Science &ndash; Data Science Engineering student
+              <span className="text-white font-bold">
+                Data Science Engineer
               </span>{' '}
               and developer focused on full-stack web platforms, artificial intelligence, computer vision, and practical software products.
             </p>

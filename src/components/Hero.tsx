@@ -143,34 +143,34 @@ export default function Hero() {
         style={{ y: heroContentY, opacity: heroOpacity }}
         className="w-full max-w-[1400px] mx-auto my-auto py-6 sm:py-10 lg:py-12"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-14 items-center">
           
-          {/* LEFT COLUMN: 58% Width - Primary Identity & Typography */}
+          {/* LEFT COLUMN: 58% Width - Dominant Identity & Clean Typography */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="lg:col-span-7 flex flex-col justify-center order-1"
           >
-            {/* 5. Small Personal Label (Eyebrow Heading) */}
+            {/* Small Eyebrow Text */}
             <motion.div
               variants={itemVariants}
               className="flex items-center gap-2.5 mb-3 sm:mb-4"
             >
-              <div className="h-px w-6 sm:w-8 bg-[#FF5A4F]/60" />
-              <span className="text-[11px] sm:text-xs font-mono font-semibold uppercase tracking-[0.28em] text-neutral-300">
-                COMPUTER SCIENCE &bull; WEB &bull; AI
+              <div className="h-px w-6 sm:w-8 bg-[#FF5A4F]" />
+              <span className="text-[11px] sm:text-xs md:text-sm font-mono font-bold uppercase tracking-[0.25em] text-[#FF5A4F]">
+                DATA-SCIENCE ENGINEER
               </span>
             </motion.div>
 
-            {/* 2 & 3. Primary Visual Element: UBAID QUAZI in Refined Editorial Typography */}
+            {/* Dominant Name Element: UBAID QUAZI. */}
             <div className="flex flex-col mb-4 sm:mb-6">
-              {/* Line 1: UBAID */}
-              <motion.div
-                variants={nameVariants}
-                className="overflow-hidden"
-              >
-                <h1 className="text-[clamp(3.5rem,8.2vw,7.8rem)] font-black tracking-[-0.04em] leading-[0.88] uppercase text-[#F5F5F5] select-text">
+              <h1 className="text-[clamp(3.5rem,7.5vw,7.4rem)] font-black tracking-[-0.035em] leading-[0.88] uppercase text-[#F5F5F5] select-text">
+                {/* Line 1: UBAID */}
+                <motion.span
+                  variants={nameVariants}
+                  className="block overflow-hidden"
+                >
                   {'UBAID'.split('').map((char, index) => (
                     <motion.span
                       key={`u-${index}`}
@@ -181,71 +181,57 @@ export default function Hero() {
                       {char}
                     </motion.span>
                   ))}
-                </h1>
-              </motion.div>
+                </motion.span>
 
-              {/* Line 2: QUAZI (with subtle accent letter Z and elegant period) */}
-              <motion.div
-                variants={nameVariants}
-                className="overflow-hidden mt-1 sm:mt-1.5"
-              >
-                <div className="text-[clamp(3.5rem,8.2vw,7.8rem)] font-black tracking-[-0.04em] leading-[0.88] uppercase text-[#F5F5F5] flex items-baseline select-text">
-                  {/* Q */}
-                  <motion.span
-                    variants={letterVariants}
-                    whileHover={{ y: -3, scale: 1.04 }}
-                    className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
-                  >
-                    Q
-                  </motion.span>
-                  {/* U */}
-                  <motion.span
-                    variants={letterVariants}
-                    whileHover={{ y: -3, scale: 1.04 }}
-                    className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
-                  >
-                    U
-                  </motion.span>
-                  {/* A */}
-                  <motion.span
-                    variants={letterVariants}
-                    whileHover={{ y: -3, scale: 1.04 }}
-                    className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
-                  >
-                    A
-                  </motion.span>
-                  {/* Z - Refined subtle outlined accent letter */}
-                  <motion.span
-                    variants={letterVariants}
-                    whileHover={{ y: -3, scale: 1.06 }}
-                    className="inline-block text-outline-strong text-transparent font-black px-0.5 transition-all duration-300 hover:text-[#FF5A4F] hover:drop-shadow-[0_0_25px_rgba(255,90,79,0.5)]"
-                    title="Z"
-                  >
-                    Z
-                  </motion.span>
-                  {/* I */}
-                  <motion.span
-                    variants={letterVariants}
-                    whileHover={{ y: -3, scale: 1.04 }}
-                    className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
-                  >
-                    I
-                  </motion.span>
-                  {/* Subtle Accent Dot */}
-                  <motion.span
-                    variants={letterVariants}
-                    className="inline-block text-[#FF5A4F] ml-1 sm:ml-2 font-mono font-bold"
-                  >
-                    .
-                  </motion.span>
-                </div>
-              </motion.div>
+                {/* Line 2: QUAZI. (Polished Z accent with unified stroke & kerning) */}
+                <motion.span
+                  variants={nameVariants}
+                  className="block overflow-hidden mt-1 sm:mt-2"
+                >
+                  <span className="inline-flex items-baseline">
+                    {['Q', 'U', 'A'].map((char, index) => (
+                      <motion.span
+                        key={`q-${index}`}
+                        variants={letterVariants}
+                        whileHover={{ y: -3, scale: 1.04 }}
+                        className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                    {/* Polished Z accent - identical font weight, baseline & tight tracking */}
+                    <motion.span
+                      variants={letterVariants}
+                      whileHover={{ y: -3, scale: 1.04 }}
+                      className="inline-block bg-gradient-to-br from-[#FF7A6F] via-[#FF5A4F] to-[#FF453A] bg-clip-text text-transparent font-black drop-shadow-[0_0_20px_rgba(255,90,79,0.35)] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,90,79,0.6)]"
+                      title="Z"
+                    >
+                      Z
+                    </motion.span>
+                    {/* I */}
+                    <motion.span
+                      variants={letterVariants}
+                      whileHover={{ y: -3, scale: 1.04 }}
+                      className="inline-block transition-colors duration-200 hover:text-[#FF5A4F]"
+                    >
+                      I
+                    </motion.span>
+                    {/* Signature Accent Period */}
+                    <motion.span
+                      variants={letterVariants}
+                      className="inline-block text-[#FF5A4F] ml-0.5 sm:ml-1 font-mono font-black"
+                    >
+                      .
+                    </motion.span>
+                  </span>
+                </motion.span>
+              </h1>
             </div>
 
-            {/* 4. Developer Title */}
+            {/* Sub-statement: Developer Title */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-3 mb-4 sm:mb-5"
+              className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5"
             >
               <span className="text-xs sm:text-sm md:text-base font-mono font-bold uppercase tracking-[0.2em] text-[#FF5A4F]">
                 FULL-STACK DEVELOPER
@@ -256,7 +242,7 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* 4. Short Powerful Introduction (2-3 lines on desktop) */}
+            {/* Short Introduction */}
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-[1.125rem] font-light text-neutral-300 leading-relaxed max-w-lg lg:max-w-xl mb-7 sm:mb-8"
@@ -264,7 +250,7 @@ export default function Hero() {
               I build modern web experiences and intelligent software that turn ideas into something people can actually use.
             </motion.p>
 
-            {/* 7. Action Buttons (Refined, small & premium) */}
+            {/* Action Buttons */}
             <motion.div
               variants={itemVariants}
               className="flex flex-wrap items-center gap-3.5 sm:gap-4"
@@ -289,7 +275,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT COLUMN: 42% Width - Balanced Portrait with Breathing Room */}
+          {/* RIGHT COLUMN: 42% Width - Dedicated Editorial Portrait Composition */}
           <motion.div
             variants={portraitVariants}
             initial="hidden"
@@ -297,34 +283,62 @@ export default function Hero() {
             style={{ scale: portraitScale }}
             className="lg:col-span-5 flex items-center justify-center lg:justify-end relative order-2 py-4 lg:py-0"
           >
-            <div className="relative flex items-center justify-center p-2 sm:p-4">
-              {/* 8. Subtle Warm Ambient Glow Behind Person */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 rounded-full bg-gradient-to-tr from-[#FF5A4F]/16 via-[#FF7A00]/08 to-transparent blur-3xl pointer-events-none -z-10" />
+            {/* Portrait Frame Container */}
+            <div className="relative w-full max-w-[320px] xs:max-w-[350px] sm:max-w-[380px] lg:max-w-[400px] xl:max-w-[430px]">
+              
+              {/* Ambient Warm Atmospheric Glow behind card */}
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-[#FF5A4F]/14 via-[#FF7A00]/06 to-transparent blur-2xl pointer-events-none -z-10" />
 
-              {/* 1 & 8. Full-Body Cutout Photo Sized to ~35-45% of Hero Height with Bottom Blend */}
-              <div
-                className="relative w-[210px] sm:w-[260px] md:w-[290px] lg:w-[320px] xl:w-[350px] h-[310px] sm:h-[370px] md:h-[410px] lg:h-[440px] xl:h-[470px] max-h-[44vh] flex items-end justify-center"
-                style={{
-                  maskImage: 'linear-gradient(to bottom, black 84%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 84%, transparent 100%)',
-                }}
-              >
-                <Image
-                  src="/ubaid-hero.webp"
-                  alt="Ubaid Quazi - Full-Stack Developer & AI Enthusiast"
-                  width={682}
-                  height={1024}
-                  priority
-                  className="w-full h-full object-contain object-bottom filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] drop-shadow-[0_0_20px_rgba(255,90,79,0.12)] transition-transform duration-700 hover:scale-[1.02] select-none pointer-events-auto"
-                />
-              </div>
+              {/* Main Portrait Card */}
+              <div className="relative h-[430px] xs:h-[470px] sm:h-[510px] lg:h-[520px] xl:h-[560px] rounded-2xl sm:rounded-3xl overflow-hidden border border-white/[0.09] bg-gradient-to-b from-[#141418] via-[#0d0d10] to-[#070707] shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_30px_rgba(255,90,79,0.08)]">
+                
+                {/* Subtle Interior Warm Glow behind person's head & shoulders */}
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-72 h-64 sm:h-72 rounded-full bg-gradient-to-tr from-[#FF5A4F]/18 via-[#FF7A00]/08 to-transparent blur-2xl pointer-events-none" />
 
-              {/* Minimal Editorial Photo Tag */}
-              <div className="hidden xl:flex absolute bottom-4 -left-6 items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-[#070707]/80 backdrop-blur-md">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
-                <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
-                  UBAID QUAZI
-                </span>
+                {/* Subtle Editorial Faint Grid in background */}
+                <div className="absolute inset-0 bg-grid-faint opacity-30 pointer-events-none" />
+
+                {/* Technical Corner Accents */}
+                <div className="absolute top-3.5 left-4 flex items-center gap-1.5 z-20">
+                  <span className="text-[9px] font-mono tracking-widest text-neutral-400 uppercase">
+                    ID // UQ-01
+                  </span>
+                </div>
+                <div className="absolute top-3.5 right-4 flex items-center gap-1.5 z-20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F] animate-pulse" />
+                  <span className="text-[9px] font-mono tracking-widest text-[#FF5A4F] uppercase font-bold">
+                    ACTIVE
+                  </span>
+                </div>
+
+                {/* Portrait Image Layer (Upper body, face, glasses, suit prominently displayed) */}
+                <div className="relative w-full h-full flex items-end justify-center pt-8">
+                  <Image
+                    src="/ubaid-portrait.webp"
+                    alt="Ubaid Quazi - Full-Stack Developer & AI Enthusiast"
+                    width={495}
+                    height={615}
+                    priority
+                    className="w-full h-full object-cover object-top filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.9)] transition-transform duration-700 hover:scale-[1.02] select-none"
+                  />
+                  
+                  {/* Soft bottom blend to seamlessly integrate torso into dark card base */}
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#070707] via-[#070707]/75 to-transparent pointer-events-none z-10" />
+                </div>
+
+                {/* Editorial Bottom Badge */}
+                <div className="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between z-20 px-3.5 py-2 rounded-xl bg-[#070707]/80 backdrop-blur-md border border-white/[0.08]">
+                  <div className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A4F]" />
+                    <span className="text-[10px] font-mono font-semibold tracking-wider text-neutral-200 uppercase">
+                      UBAID QUAZI
+                    </span>
+                  </div>
+                  <span className="text-[9px] font-mono tracking-wider text-neutral-400 uppercase">
+                    FULL-STACK &bull; AI
+                  </span>
+                </div>
+
               </div>
             </div>
           </motion.div>
